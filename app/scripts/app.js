@@ -2,15 +2,23 @@
 
 angular.module('codeApp', [
   'ngResource',
-  'ngRoute'
+  'ngRoute',
+  'angular-blocks',
+  'HomeModule',
+  'VideosModule'
 ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, $locationProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl'
+        templateUrl: 'views/partials/home.html',
+        controller: 'HomeCtrl'
+      })
+      .when('/videos', {
+        templateUrl: 'views/partials/videos.html',
+        controller: 'VideosCtrl'
       })
       .otherwise({
         redirectTo: '/'
       });
+    $locationProvider.html5Mode(true);
   });

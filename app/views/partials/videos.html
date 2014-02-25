@@ -1,0 +1,11 @@
+
+<!-- This ng-controller is placed to assign a controller  -->
+<!-- Normally, it would be bound in app.js routes -->
+<!-- Actually, it does but what about partials? -->
+<!-- If this view is called via partial we don't come from a route-->
+<!-- Conclusion: we'll bind VideosCtrl inside the tag -->
+<div ng-controller="VideosCtrl">
+  <li ng-repeat="vid in videos">
+   {{vid}}
+ </li>
+</div>
