@@ -3,7 +3,16 @@
 * SCSS FILE FOR THE MODULE: left_nav
 * @author Derrick Roccka
 **/
-
-nav{
-	background: green;
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'bourbon/app/assets/stylesheets/_bourbon';
+@import '../styles/helpers/mixins';
+#left_nav ul{
+	@include size(128px 768px);
+	@include min-size(auto 768px);
+	li{
+		@include size(100% 128px);
+		background: #000;
+		margin: 0 0 2px 0;
+	}
 }
+

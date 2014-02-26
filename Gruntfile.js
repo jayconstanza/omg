@@ -62,7 +62,7 @@ module.exports = function (grunt) {
       options: {
         port: 9000,
         // Change this to '0.0.0.0' to access the server from outside.
-        hostname: '192.168.1.42',
+        hostname: '0.0.0.0',
         livereload: 35729
       },
       livereload: {
@@ -285,8 +285,7 @@ module.exports = function (grunt) {
             'views/{,*/}*.html',
             'bower_components/**/*',
             'images/{,*/}*.{webp}',
-            'fonts/*',
-            'blablabla/*'
+            'fonts/*'
           ]
         }, {
           expand: true,
