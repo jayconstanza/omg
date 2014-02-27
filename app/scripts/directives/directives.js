@@ -7,7 +7,7 @@ angular.module('Directives', [])
 			callback : '&cb',
 			num: '&px'
 		},
-		link: function(scope, element, attrs) {
+		link: function(scope, element) {
 			$rootScope.$watch('windowSize.width', function(newVal, oldVal){
 				console.log('newVal', newVal);
 				console.log('oldVal', oldVal);
@@ -23,11 +23,6 @@ angular.module('Directives', [])
 			});
 			console.log(scope.num());
 			scope.callback({ data: scope.num() });
-			/**
-				TODO:
-				- cambiar windowSize.width en el watch por un attr variable			
-			**/
-			
 		}
 	};
 }]);
