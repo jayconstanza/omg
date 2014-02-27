@@ -60,13 +60,14 @@
 
 		<!-- build:js({.tmp,app}) scripts/scripts.js -->
 		<script src="scripts/app.js"></script>
+		<script src="scripts/directives/directives.js"></script>
 		<script src="scripts/controllers/home.js"></script>
 		<script src="scripts/controllers/videos.js"></script>
 		<!-- endbuild -->
 		<!-- templates -->
 		<script type="text/ng-template" id="/layout.html">
-			<ng-include src="'views/modules/left_nav.html'"></ng-include>
-			<section id="ajax_container" class="pull-left">
+			<ng-include src="'views/modules/left_nav.html'" class="pull-left"></ng-include>
+			<section id="ajax_container" class="pull-right" adapt px="128" cb="adaptCb(data)">
 				<article id="center_panel" class="pull-left" data-block="center_panel" ></article>
 				<nav id="right_nav" class="pull-right" data-block="right_nav"></nav>
 			</section>

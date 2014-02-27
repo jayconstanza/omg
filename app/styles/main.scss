@@ -12,3 +12,9 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import '../styles/partials/photo';
 @import '../styles/partials/about_me';
 @import '../styles/partials/social';
+
+#ajax_container{
+	
+	@include size(100%);
+	position: relative;
+}

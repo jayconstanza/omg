@@ -4,8 +4,9 @@
 <!-- Actually, it does but what about partials? -->
 <!-- If this view is called via partial we don't come from a route-->
 <!-- Conclusion: we'll bind VideosCtrl inside the tag -->
-<div ng-controller="VideosCtrl">
-  <li ng-repeat="vid in videos">
+<div data-extend-template="/layout.html">
+	<h1 data-block-append="center_panel">SOY EL CENTER PANEL DE los videos</h1>
+	  <li ng-repeat="vid in videos">
    {{vid}}
  </li>
 </div>

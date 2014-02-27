@@ -4,6 +4,7 @@ angular.module('codeApp', [
   'ngResource',
   'ngRoute',
   'angular-blocks',
+  'Directives',
   'HomeModule',
   'VideosModule'
 ])

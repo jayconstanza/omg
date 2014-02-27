@@ -9,10 +9,18 @@
 #left_nav ul{
 	@include size(128px 768px);
 	@include min-size(auto 768px);
+	position: relative;
 	li{
 		@include size(100% 128px);
-		background: #000;
-		margin: 0 0 2px 0;
+		background: url(../../images/pattern_black_stripes_256x256.jpg) repeat;
+		margin: 0 0 1px 0;
+		div, a, img{
+			@include size(64px);
+			margin: 0 auto;
+		}
+		div{
+			margin-top: 32px;
+		}
 	}
 }
 
