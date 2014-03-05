@@ -1,0 +1,73 @@
+/**
+*
+* SCSS FILE FOR THE HELPER: app/styles/helpers/home.scss
+* @author Derrick Roccka
+**/
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'bourbon/app/assets/stylesheets/_bourbon';
+
+/*=================================
+=            VARIABLES            =
+=================================*/
+
+/*==========  COLORS  ==========*/
+
+$darkRed: rgb(173,42,42);
+$grey: rgb(46,46,46);
+$lightGrey: rgb(233,233,233);
+
+/*==========  FONTS  ==========*/
+
+$font-base: 14px;
+$h1: 36px;
+$h2: 24px;
+$h3: 18px;
+$h4: 16px;
+$font-fancy: "archi";
+
+/*-----  End of VARIABLES  ------*/
+
+/*==============================
+=            MIXINS            =
+==============================*/
+
+@mixin display($value){
+	display: $value;
+}
+@mixin font-size($size){
+	font-size: $size;
+	line-height: $size;
+}
+@mixin change-font-set($family, $color, $size){
+	color: $color;
+	font-family: $family;
+	font-size: $size;
+}
+
+/*-----  End of MIXINS  ------*/
+
+/*===============================
+=            CLASSES            =
+===============================*/
+
+.fancy{
+	@include change-font-set('archi', $darkRed, $h3);
+}
+
+/*-----  End of CLASSES  ------*/
+
+/*==================================
+=            ANIMATIONS            =
+==================================*/
+
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/*-----  End of ANIMATIONS  ------*/
+

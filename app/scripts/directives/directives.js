@@ -1,28 +1,24 @@
 'use strict';
 
 angular.module('Directives', [])
-.directive('adapt', [ '$window', '$rootScope', function($window, $rootScope) {
+.directive('ngAdapt', [ '$window', '$rootScope', function($window, $rootScope) {
 	return {
 		scope: {
 			callback : '&cb',
 			num: '&px'
 		},
 		link: function(scope, element) {
-			$rootScope.$watch('windowSize.width', function(newVal, oldVal){
-				console.log('newVal', newVal);
-				console.log('oldVal', oldVal);
+			var win = angular.element($window);
+			$rootScope.$watch('windowSize.width', function(newVal){
 				angular.element(element).css('width', newVal - scope.num() - 15);
-				// console.log('$window', $window);
 			});
-			angular.element($window).bind('resize', function(){
-
+			win.bind('resize', function(){
 				$rootScope.$apply(function(){
-					$rootScope.windowSize.width = angular.element($window).width();
-					$rootScope.windowSize.height = angular.element($window).height();
+					//15px to balance the difference in the beginning (due to scrollbar)
+					$rootScope.windowSize.width = win.width()+15;
+					$rootScope.windowSize.height = win.height();
 				});
 			});
-			console.log(scope.num());
-			scope.callback({ data: scope.num() });
 		}
 	};
 }]);

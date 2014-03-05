@@ -19,6 +19,7 @@
 	<!-- build:css({.tmp,app}) styles/main.css -->
 	<link rel="stylesheet" href="styles/main.css">
 	<!-- endbuild -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
   </head>
   <body ng-app="codeApp">
 	<!--[if lt IE 7]>
@@ -67,8 +68,19 @@
 		<!-- templates -->
 		<script type="text/ng-template" id="/layout.html">
 			<ng-include src="'views/modules/left_nav.html'" class="pull-left"></ng-include>
-			<section id="ajax_container" class="pull-right" adapt px="128" cb="adaptCb(data)">
-				<article id="center_panel" class="pull-left" data-block="center_panel" ></article>
+			<section id="ajax_container" class="pull-right" ng-adapt px="128">
+				<article id="center_panel" class="pull-left" data-block="center_panel" >
+					<header id="center_panel-header" data-block="center_panel-header"></header>
+					<section id="center_panel-brackets_container" data-block="center_panel-brackets_container"></section>
+					<footer>
+						<span class="fancy">¡Compártelo!</span>
+						<ul class="list-inline">
+							<li ng-repeat="icon in socialIcons">
+								<a href="{{icon.url}}" class="{{icon.klass}}"></a>
+							</li>
+						</ul>
+					</footer>
+				</article>
 				<nav id="right_nav" class="pull-right" data-block="right_nav"></nav>
 			</section>
 		</script>

@@ -1,12 +1,4 @@
-
-<!-- This ng-controller is placed to assign a controller  -->
-<!-- Normally, it would be bound in app.js routes -->
-<!-- Actually, it does but what about partials? -->
-<!-- If this view is called via partial we don't come from a route-->
-<!-- Conclusion: we'll bind VideosCtrl inside the tag -->
 <div data-extend-template="/layout.html">
-	<h1 data-block-append="center_panel">SOY EL CENTER PANEL DE los videos</h1>
-	  <li ng-repeat="vid in videos">
-   {{vid}}
- </li>
+	<h1 data-block-prepend="center_panel-header">SOY EL CENTER PANEL DE LOS VIDEOS</h1>
+	<div data-block-prepend="center_panel-brackets_container" id="center_panel-player"></div>
 </div>

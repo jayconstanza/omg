@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'archi';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Architects Daughter'), local('ArchitectsDaughter'), url(http://themes.googleusercontent.com/static/fonts/architectsdaughter/v4/RXTgOOQ9AAtaVOHxx0IUBLX-17DZ7sxHqV95SKqxd6w.woff) format('woff');
+}
+
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 // Tha main path is in app/bower_components/
 @import 'sass-bootstrap/lib/bootstrap';
@@ -12,9 +19,78 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import '../styles/partials/photo';
 @import '../styles/partials/about_me';
 @import '../styles/partials/social';
-
+a{
+    color: $grey;
+    &:hover{
+        color: $darkRed;
+        text-decoration: none;
+    }
+}
+body{
+    background: url(../images/pattern_white_stripes_256x256.jpg) repeat transparent;
+    color: $grey;
+    font-size: 16px;
+}
+h1{
+    @include font-size($h1);
+}
+h2{
+    @include font-size($h2);
+}
+h3{
+    @include font-size($h3);
+}
+h4{
+    @include font-size($h4);
+}
+html{
+    font-size: 16px;
+}
 #ajax_container{
-	
-	@include size(100%);
-	position: relative;
+    @extend .text-center;
+    @include min-size(auto 773px);
+    @include position(relative);
+    @include size(100%);
+    #center_panel{
+        @include size(100%);
+        #center_panel-brackets_container{
+            @include size(768px 437px);
+            background: url(../../images/brackets.png) no-repeat transparent center;
+            background-size: cover;
+            margin: 0 auto;
+        }
+        footer{
+            .fancy{
+                @include display(inline-block);
+                @include transform(rotate(-4deg));
+                height: 18px;
+                margin: 0 0 1rem 0;
+            }
+        }
+    }
+}
+[class*="icon-"] {
+    @include inline-block;
+    @include size(32px);
+    background-image: url(../../images/sprites.png);
+    background-repeat: no-repeat;
+}
+.icon-tw {
+    background-position: 0 0;
+    width: 36px;
+}
+.icon-fb {
+    background-position: -36px 0;
+    width: 32px;
+}
+.icon-gplus {
+    background-position: -68px 0;
+    width: 32px;
+}
+.icon-insta {
+    background-position: -100px 0;
+    width: 32px;
+}
+.icon-bubbles {
+    background-position: 0 -32px;
 }

@@ -1,6 +1,6 @@
 /**
 *
-* SCSS FILE FOR THE MODULE: left_nav
+* SCSS FILE FOR THE MODULE: left_nav.scss
 * @author Derrick Roccka
 **/
 @import 'sass-bootstrap/lib/bootstrap';
@@ -14,12 +14,31 @@
 		@include size(100% 128px);
 		background: url(../../images/pattern_black_stripes_256x256.jpg) repeat;
 		margin: 0 0 1px 0;
+		.menu_wrap{
+			@include min-size(128px 32px);
+			@include position(relative);
+			@include size(128px 32px);
+			background: url(../../images/pattern_black_stripes_256x256.jpg) repeat;
+			bottom: 0;
+			color: $lightGrey;
+		}
 		div, a, img{
 			@include size(64px);
 			margin: 0 auto;
 		}
 		div{
 			margin-top: 32px;
+		}
+		&:first-child{
+			div{
+				margin-top: 25.5px;
+				img{
+					@include size(64px 77px);
+				}
+			}
+		}
+		&:hover{
+			background: url(../../images/pattern_red_stripes_256x256.jpg) repeat;
 		}
 	}
 }

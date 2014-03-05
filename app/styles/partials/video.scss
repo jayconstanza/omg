@@ -1,0 +1,18 @@
+/**
+*
+* SCSS FILE FOR THE PARTIAL: video.scss
+* @author Derrick Roccka
+**/
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'bourbon/app/assets/stylesheets/_bourbon';
+@import '../styles/helpers/mixins';
+
+#center_panel-brackets_container{
+	#center_panel-player{
+		@include size(640px 360px);
+		background: red;
+		margin: 0 auto;
+		top: 38px;
+		position: relative;
+	}
+}
