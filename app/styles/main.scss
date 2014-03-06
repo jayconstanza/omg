@@ -4,6 +4,42 @@
   font-weight: 400;
   src: local('Architects Daughter'), local('ArchitectsDaughter'), url(http://themes.googleusercontent.com/static/fonts/architectsdaughter/v4/RXTgOOQ9AAtaVOHxx0IUBLX-17DZ7sxHqV95SKqxd6w.woff) format('woff');
 }
+@font-face {
+  font-family: 'open';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'open';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+}
+@font-face {
+  font-family: 'open';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/MTP_ySUJH_bn48VBG8sNSqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+}
+@font-face {
+  font-family: 'open';
+  font-style: italic;
+  font-weight: 300;
+  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxvR_54zmj3SbGZQh3vCOwvY.woff) format('woff');
+}
+@font-face {
+  font-family: 'open';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/xjAJXh38I15wypJXxuGMBrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+}
+@font-face {
+  font-family: 'open';
+  font-style: italic;
+  font-weight: 600;
+  src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxuw_rQOTGi-AJs5XCWaKIhU.woff) format('woff');
+}
 
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 // Tha main path is in app/bower_components/
@@ -29,19 +65,33 @@ a{
 body{
     background: url(../images/pattern_white_stripes_256x256.jpg) repeat transparent;
     color: $grey;
+    font-family: 'open';
     font-size: 16px;
+    font-weight: 300;
 }
 h1{
     @include font-size($h1);
+    font-family: 'open';
+    font-size: 16px;
+    font-weight: 400;
 }
 h2{
     @include font-size($h2);
+    font-family: 'open';
+    font-size: 16px;
+    font-weight: 400;
 }
 h3{
     @include font-size($h3);
+    font-family: 'open';
+    font-size: 16px;
+    font-weight: 400;
 }
 h4{
     @include font-size($h4);
+    font-family: 'open';
+    font-size: 16px;
+    font-weight: 400;
 }
 html{
     font-size: 16px;

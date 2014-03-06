@@ -4,7 +4,6 @@ angular.module('Directives', [])
 .directive('ngAdapt', [ '$window', '$rootScope', function($window, $rootScope) {
 	return {
 		scope: {
-			callback : '&cb',
 			num: '&px'
 		},
 		link: function(scope, element) {

@@ -3,6 +3,7 @@
 angular.module('codeApp', [
   'ngResource',
   'ngRoute',
+  'ngAnimate',
   'angular-blocks',
   'Directives',
   'HomeModule',

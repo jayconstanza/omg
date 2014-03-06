@@ -14,13 +14,25 @@
 		@include size(100% 128px);
 		background: url(../../images/pattern_black_stripes_256x256.jpg) repeat;
 		margin: 0 0 1px 0;
+		.menu_likes{
+			@include min-size(256px 128px);
+			@include position(fixed);
+			@include size(256px 128px);
+			background: white;
+			left: 128px;
+			top: 256px;
+			z-index: 10000;
+		}
 		.menu_wrap{
-			@include min-size(128px 32px);
+			@extend .text-center;
+			@include min-size(128px 24px);
 			@include position(relative);
-			@include size(128px 32px);
+			@include size(128px 24px);
 			background: url(../../images/pattern_black_stripes_256x256.jpg) repeat;
-			bottom: 0;
+			bottom: 28px;
 			color: $lightGrey;
+			left: 0;
+			text-transform: uppercase;
 		}
 		div, a, img{
 			@include size(64px);
@@ -30,11 +42,14 @@
 			margin-top: 32px;
 		}
 		&:first-child{
-			div{
+			div:not(.menu_wrap){
 				margin-top: 25.5px;
 				img{
 					@include size(64px 77px);
 				}
+			}
+			.menu_wrap{
+				bottom: 21.5px !important;
 			}
 		}
 		&:hover{
