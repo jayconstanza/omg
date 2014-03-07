@@ -1,6 +1,6 @@
 /**
 *
-* SCSS FILE FOR THE HELPER: app/styles/helpers/home.scss
+* SCSS FILE FOR THE HELPER: app/styles/helpers/mixins.scss
 * @author Derrick Roccka
 **/
 @import 'sass-bootstrap/lib/bootstrap';
@@ -24,6 +24,12 @@ $h2: 24px;
 $h3: 18px;
 $h4: 16px;
 $font-fancy: "archi";
+
+/*==========  IMAGES  ==========*/
+
+$bg-stripe-black: "../../images/patterns/pattern_black_stripes_256x256.jpg";
+$bg-stripe-red: "../../images/patterns/pattern_red_stripes_256x256.jpg";
+$bg-stripe-white: "../../images/patterns/pattern_white_stripes_256x256.jpg";
 
 /*-----  End of VARIABLES  ------*/
 
@@ -50,8 +56,41 @@ $font-fancy: "archi";
 =            CLASSES            =
 ===============================*/
 
+/*==========  TYPO  ==========*/
+
 .fancy{
 	@include change-font-set('archi', $darkRed, $h3);
+}
+
+/*==========  SPRITES  ==========*/
+
+[class*="icon-"] {
+    @include inline-block;
+    @include size(32px);
+    background-image: url(../../images/sprites/sprites.png);
+    background-repeat: no-repeat;
+    &:hover{
+    	@include prefixer(animation, (pulse 0.7s), webkit moz ms);
+    }
+}
+.icon-tw {
+    background-position: 0 0;
+    width: 36px;
+}
+.icon-fb {
+    background-position: -36px 0;
+    width: 32px;
+}
+.icon-gplus {
+    background-position: -68px 0;
+    width: 32px;
+}
+.icon-insta {
+    background-position: -100px 0;
+    width: 32px;
+}
+.icon-bubbles {
+    background-position: 0 -32px;
 }
 
 /*-----  End of CLASSES  ------*/
@@ -67,31 +106,6 @@ $font-fancy: "archi";
 	to {
 		transform: rotate(360deg);
 	}
-}
-
-.menu_likes.ng-hide-add, .menu_likes.ng-hide-remove {
-transition:0.5s linear all;
-display:block!important;
-}
-.menu_likes {
-  -webkit-transition: color 0.6s, background-color 0.3s;
-  -moz-transition: color 0.6s, background-color 0.3s;
-  -ms-transition: color 0.6s, background-color 0.3s;
-  transition: color 0.6s, background-color 0.3s;
-
-  &.ng-hide-remove {
-    -webkit-animation: fadeInLeft 1s;
-    -moz-animation: fadeInLeft 1s;
-    -ms-animation: fadeInLeft 1s;
-    animation: fadeInLeft 1s;
-  }
-  
-  &.ng-hide-add {
-    -webkit-animation: bounceOut 1s;
-    -moz-animation: bounceOut 1s;
-    -ms-animation: bounceOut 1s;
-    animation: bounceOut 1s;
-  }
 }
 
 /*-----  End of ANIMATIONS  ------*/

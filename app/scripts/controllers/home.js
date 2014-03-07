@@ -3,12 +3,12 @@
 angular.module('HomeModule', [])
 .controller('HomeCtrl', function ($scope, $rootScope, $window) {
 	$rootScope.menuItems = [
-		{ name: 'Home', href:'/home', img:'/images/logo.png' },
-		{ name: 'Videos', href:'/videos', img:'/images/icons/videos2.png' },
-		{ name: 'LIKES', href:'', img:'images/logo.png', click: 'likes = !likes' },
-		{ name: 'Fotos', href:'/fotos', img:'/images/icons/fotos.png' },
-		{ name: 'Sobre mí', href:'/sobre-mi', img:'/images/icons/sobre-mi.png' },
-		{ name: 'Social', href:'/social', img:'/images/icons/social2.png' }
+		{ name: 'Home', href:'/home', img:'/images/icons/nav/logo.png', id:'menu-icon-logo' },
+		{ name: 'Videos', href:'/videos', img:'/images/icons/nav/videos.png', id:'menu-icon-videos' },
+		{ name: 'LIKES', href:'', img:'images/icons/nav/likes.png', click: true, id:'menu-icon-likes' },
+		{ name: 'Fotos', href:'/fotos', img:'/images/icons/nav/fotos.png', id:'menu-icon-fotos' },
+		{ name: 'Sobre mí', href:'/sobre-mi', img:'/images/icons/nav/sobre-mi.png', id:'menu-icon-sobre' },
+		{ name: 'Social', href:'/social', img:'/images/icons/nav/social.png', id:'menu-icon-social' }
 	];
 	$rootScope.windowSize = {
 		width: angular.element($window).width(),

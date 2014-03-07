@@ -12,35 +12,118 @@
 	position: relative;
 	li{
 		@include size(100% 128px);
-		background: url(../../images/pattern_black_stripes_256x256.jpg) repeat;
+		background: url($bg-stripe-black) repeat;
 		margin: 0 0 1px 0;
+
+		/*===============================
+		=            CLASSES            =
+		===============================*/
+		
+		// this is the box that has the like buttons
 		.menu_likes{
 			@include min-size(256px 128px);
-			@include position(fixed);
+			@include position(absolute);
 			@include size(256px 128px);
-			background: white;
+			background: url($bg-stripe-black) repeat;
 			left: 128px;
-			top: 256px;
+			top: -32px;
 			z-index: 10000;
+			&.ng-hide-remove, &.ng-hide-add{
+				@include display(block !important);
+				@include transition (all 0.5s linear);
+			}
+			&.ng-hide-remove {
+				@include prefixer(animation, (bounceInLeft 1s), webkit moz ms);
+				animation: bounceInLeft 1s;
+			}
+			&.ng-hide-add {
+				@include prefixer(animation, (bounceOutLeft 1s), webkit moz ms);
+				animation: bounceOutLeft 1s;
+			}
 		}
+
+		//this is the wrap that shows the title of the section on hover
 		.menu_wrap{
 			@extend .text-center;
 			@include min-size(128px 24px);
 			@include position(relative);
 			@include size(128px 24px);
-			background: url(../../images/pattern_black_stripes_256x256.jpg) repeat;
+			background: url($bg-stripe-black) repeat;
 			bottom: 28px;
 			color: $lightGrey;
 			left: 0;
 			text-transform: uppercase;
 		}
+		
+		/*-----  End of CLASSES  ------*/
+
+		/*=================================================
+		=            EACH ICON OF THE LEFT NAV            =
+		=================================================*/
+		
+		.menu-icon{
+			cursor: pointer;
+		}
+		#menu-icon-logo{
+			&:hover {
+				@include prefixer(animation, (bounceIn 1s), webkit moz ms);
+				animation: bounceIn 1s;
+			}
+		}
+		#menu-icon-videos{
+			&:hover {
+				@include prefixer(animation, (rotate 1s), webkit moz ms);
+				animation: rotate 1s;
+			}
+		}
+		#menu-icon-likes{
+			&:hover {
+				@include prefixer(animation, (pulse 0.7s), webkit moz ms);
+				animation: pulse 0.7s;
+			}
+		}
+		#menu-icon-sobre{
+			&:hover {
+				@include prefixer(animation, (bounce 0.7s), webkit moz ms);
+				animation: bounce 0.7s;
+			}
+		}
+		#menu-icon-fotos{
+			&:hover {
+				-webkit-animation: rotate 0.3s, 0.5s flash 0.2s;
+				-moz-animation: rotate 0.3s, 0.5s flash 0.2s;
+				-ms-animation: rotate 0.3s, 0.5s flash 0.2s;
+				animation: rotate 0.3s, 0.5s flash 0.2s;
+			}
+		}
+		#menu-icon-social{
+			&:hover {
+				@include prefixer(animation, (tada 0.7s), webkit moz ms);
+				animation: tada 0.7s;
+			}
+		}
+
+		/*-----  End of EACH ICON OF THE LEFT NAV  ------*/
+		
+		/*============================
+		=            TAGS            =
+		============================*/
+
 		div, a, img{
 			@include size(64px);
 			margin: 0 auto;
 		}
+
 		div{
 			margin-top: 32px;
 		}
+		
+		/*-----  End of TAGS  ------*/
+		
+		/*==================================
+		=            AMPERSANDS            =
+		==================================*/
+		
 		&:first-child{
 			div:not(.menu_wrap){
 				margin-top: 25.5px;
@@ -53,8 +136,11 @@
 			}
 		}
 		&:hover{
-			background: url(../../images/pattern_red_stripes_256x256.jpg) repeat;
+			background: url($bg-stripe-red) repeat;
 		}
+		
+		/*-----  End of AMPERSANDS  ------*/
+
 	}
 }
 

@@ -9,7 +9,8 @@
     "sass-bootstrap": "~3.0.2",
     "angular-resource": "1.2.6",
     "angular-route": "1.2.6",
-    "angular-blocks": "~0.1.8"
+    "angular-blocks": "~0.1.8",
+    "angular-animate": "~1.2.14"
   },
   "devDependencies": {
     "angular-mocks": "1.2.6",

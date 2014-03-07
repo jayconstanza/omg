@@ -1,45 +1,55 @@
+/*=================================
+=            FONT FACE            =
+=================================*/
+
 @font-face {
-  font-family: 'archi';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Architects Daughter'), local('ArchitectsDaughter'), url(http://themes.googleusercontent.com/static/fonts/architectsdaughter/v4/RXTgOOQ9AAtaVOHxx0IUBLX-17DZ7sxHqV95SKqxd6w.woff) format('woff');
+	font-family: 'archi';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Architects Daughter'), local('ArchitectsDaughter'), url(http://themes.googleusercontent.com/static/fonts/architectsdaughter/v4/RXTgOOQ9AAtaVOHxx0IUBLX-17DZ7sxHqV95SKqxd6w.woff) format('woff');
 }
 @font-face {
-  font-family: 'open';
-  font-style: normal;
-  font-weight: 300;
-  src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+	font-family: 'open';
+	font-style: normal;
+	font-weight: 300;
+	src: local('Open Sans Light'), local('OpenSans-Light'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/DXI1ORHCpsQm3Vp6mXoaTaRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
 }
 @font-face {
-  font-family: 'open';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
+	font-family: 'open';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Open Sans'), local('OpenSans'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/cJZKeOuBrn4kERxqtaUH3bO3LdcAZYWl9Si6vvxL-qU.woff) format('woff');
 }
 @font-face {
-  font-family: 'open';
-  font-style: normal;
-  font-weight: 600;
-  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/MTP_ySUJH_bn48VBG8sNSqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
+	font-family: 'open';
+	font-style: normal;
+	font-weight: 600;
+	src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/MTP_ySUJH_bn48VBG8sNSqRDOzjiPcYnFooOUGCOsRk.woff) format('woff');
 }
 @font-face {
-  font-family: 'open';
-  font-style: italic;
-  font-weight: 300;
-  src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxvR_54zmj3SbGZQh3vCOwvY.woff) format('woff');
+	font-family: 'open';
+	font-style: italic;
+	font-weight: 300;
+	src: local('Open Sans Light Italic'), local('OpenSansLight-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxvR_54zmj3SbGZQh3vCOwvY.woff) format('woff');
 }
 @font-face {
-  font-family: 'open';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Open Sans Italic'), local('OpenSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/xjAJXh38I15wypJXxuGMBrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+	font-family: 'open';
+	font-style: italic;
+	font-weight: 400;
+	src: local('Open Sans Italic'), local('OpenSans-Italic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/xjAJXh38I15wypJXxuGMBrrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
 }
 @font-face {
-  font-family: 'open';
-  font-style: italic;
-  font-weight: 600;
-  src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxuw_rQOTGi-AJs5XCWaKIhU.woff) format('woff');
+	font-family: 'open';
+	font-style: italic;
+	font-weight: 600;
+	src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxuw_rQOTGi-AJs5XCWaKIhU.woff) format('woff');
 }
+
+/*-----  End of FONT FACE  ------*/
+
+/*===============================
+=            IMPORTS            =
+===============================*/
 
 $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 // Tha main path is in app/bower_components/
@@ -55,92 +65,90 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import '../styles/partials/photo';
 @import '../styles/partials/about_me';
 @import '../styles/partials/social';
+
+/*-----  End of IMPORTS  ------*/
+
+/*============================
+=            TAGS            =
+============================*/
+
 a{
-    color: $grey;
-    &:hover{
-        color: $darkRed;
-        text-decoration: none;
-    }
+	color: $grey;
+	&:hover{
+		color: $darkRed;
+		text-decoration: none;
+	}
 }
 body{
-    background: url(../images/pattern_white_stripes_256x256.jpg) repeat transparent;
-    color: $grey;
-    font-family: 'open';
-    font-size: 16px;
-    font-weight: 300;
+	background: url($bg-stripe-white) repeat transparent;
+	color: $grey;
+	font-family: 'open';
+	font-size: 16px;
+	font-weight: 300;
+}
+body > .container-fluid{
+	@include position(relative);
 }
 h1{
-    @include font-size($h1);
-    font-family: 'open';
-    font-size: 16px;
-    font-weight: 400;
+	@include font-size($h1);
+	font-family: 'open';
+	font-size: 16px;
+	font-weight: 400;
 }
 h2{
-    @include font-size($h2);
-    font-family: 'open';
-    font-size: 16px;
-    font-weight: 400;
+	@include font-size($h2);
+	font-family: 'open';
+	font-size: 16px;
+	font-weight: 400;
 }
 h3{
-    @include font-size($h3);
-    font-family: 'open';
-    font-size: 16px;
-    font-weight: 400;
+	@include font-size($h3);
+	font-family: 'open';
+	font-size: 16px;
+	font-weight: 400;
 }
 h4{
-    @include font-size($h4);
-    font-family: 'open';
-    font-size: 16px;
-    font-weight: 400;
+	@include font-size($h4);
+	font-family: 'open';
+	font-size: 16px;
+	font-weight: 400;
 }
 html{
-    font-size: 16px;
+	font-size: 16px;
 }
+
+/*-----  End of TAGS  ------*/
+
+
+/*============================
+=            ID'S            =
+============================*/
+
 #ajax_container{
-    @extend .text-center;
-    @include min-size(auto 773px);
-    @include position(relative);
-    @include size(100%);
-    #center_panel{
-        @include size(100%);
-        #center_panel-brackets_container{
-            @include size(768px 437px);
-            background: url(../../images/brackets.png) no-repeat transparent center;
-            background-size: cover;
-            margin: 0 auto;
-        }
-        footer{
-            .fancy{
-                @include display(inline-block);
-                @include transform(rotate(-4deg));
-                height: 18px;
-                margin: 0 0 1rem 0;
-            }
-        }
-    }
+	@extend .text-center;
+	@include min-size(auto 773px);
+	@include position(relative);
+	@include size(100%);
+	#center_panel{
+		@include size(100%);
+		#center_panel-brackets_container{
+			@include size(768px 437px);
+			background: url(../../images/brackets.png) no-repeat transparent center;
+			background-size: cover;
+			margin: 0 auto;
+		}
+		footer{
+			.fancy{
+				@include display(inline-block);
+				@include transform(rotate(-4deg));
+				height: 18px;
+				margin: 0 0 1rem 0;
+				&:hover{
+					@include prefixer(animation, (swing 0.7s), moz ms webkit);
+				}
+			}
+		}
+	}
 }
-[class*="icon-"] {
-    @include inline-block;
-    @include size(32px);
-    background-image: url(../../images/sprites.png);
-    background-repeat: no-repeat;
-}
-.icon-tw {
-    background-position: 0 0;
-    width: 36px;
-}
-.icon-fb {
-    background-position: -36px 0;
-    width: 32px;
-}
-.icon-gplus {
-    background-position: -68px 0;
-    width: 32px;
-}
-.icon-insta {
-    background-position: -100px 0;
-    width: 32px;
-}
-.icon-bubbles {
-    background-position: 0 -32px;
-}
+
+/*-----  End of ID'S  ------*/

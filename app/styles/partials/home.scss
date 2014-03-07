@@ -30,7 +30,7 @@
 	#center_panel-brackets_container{
 		#center_panel-logo{
 			@include size(320px 320px);
-			background: url(../../images/pattern_red_stripes_256x256.jpg) repeat transparent;
+			background: url($bg-stripe-red) repeat transparent;
 			border-radius: 50%;
 			margin: 0 auto;
 			top: 48px;
