@@ -20,7 +20,7 @@ angular.module('Services', [])
 		},
 
 		getVideoStatistics: function(id){
-			var statisticsURL = 'https://www.googleapis.com/youtube/v3/videos?id='+id+'&key=AIzaSyD-OH-663ZPQs9jWyi8rYWdXzK3P4Xtn9U&callback=JSON_CALLBACK&part=statistics&fields=items(statistics)';
+			var statisticsURL = 'https://www.googleapis.com/youtube/v3/videos?id='+id+'&key=AIzaSyD-OH-663ZPQs9jWyi8rYWdXzK3P4Xtn9U&callback=JSON_CALLBACK&part=statistics,contentDetails&fields=items(statistics, contentDetails(duration))';
 			var statistics = [];
 			$http.jsonp(statisticsURL)
 			.success(function(data){

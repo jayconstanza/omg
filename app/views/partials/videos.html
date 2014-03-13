@@ -28,6 +28,10 @@
 			<span class="like-count">
 				<b>{{ videoStatistics[0].statistics.likeCount }}</b><br>OMG's!
 			</span>
+			<img src="images/icons/nav/videos.png" alt="">
+			<span class="duration">
+				<b>{{ videoStatistics[0].contentDetails.duration | durationFilter }}</b>min<br>aprx.
+			</span>
 		</p>
 	</div>
 </div>
