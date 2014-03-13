@@ -57,8 +57,21 @@
 			background: url($bg-stripe-black) repeat;
 			margin-top: -35px;
 			.description{
-				@include change-font-set('open', $lightGrey, 20px, 300);
-				padding: 20px;
+				@include change-font-set('open', $lightGrey, 18px, 300);
+				padding: 36px;
+			}
+			.statistics{
+				@include change-font-set('open', $lightGrey, 16px, 300);
+				padding: 36px;
+				.view-count, .like-count{
+					@include display(inline-block);
+					margin: 0 8px 0 0;
+				}
+				img{
+					@include display(inline-block);
+					@include size(32px);
+					margin: -20px 0 0 0;
+				}
 			}
 			h2{
 				color: $lightGrey;

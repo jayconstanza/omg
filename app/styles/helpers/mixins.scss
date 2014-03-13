@@ -45,10 +45,11 @@ $bg-stripe-white: "../../images/patterns/pattern_white_stripes_256x256.jpg";
 	line-height: $size;
 }
 @mixin change-font-set($family, $color, $size, $weight...){
+    $f: if(length($family) == 0, 'open', $family);
     $w: if(length($weight) == 0, normal, $weight);
 
 	color: $color;
-	font-family: $family;
+	font-family: $f;
     font-weight: $w;
 	@include font-size($size);
 }
