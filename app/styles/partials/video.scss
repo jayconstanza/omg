@@ -1,18 +1,73 @@
 /**
 *
-* SCSS FILE FOR THE PARTIAL: video.scss
+* SCSS FILE FOR THE PARTIAL: app/styles/partials/video.scss
 * @author Derrick Roccka
 **/
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'bourbon/app/assets/stylesheets/_bourbon';
 @import '../styles/helpers/mixins';
 
-#center_panel-brackets_container{
-	#center_panel-player{
-		@include size(640px 360px);
-		background: red;
-		margin: 0 auto;
-		top: 38px;
-		position: relative;
+//important to add the class related to each section
+#ajax_container.videos{
+	#center_panel.videos{
+		header{
+			.video-title{
+				@include font-size($h2);
+				@include position(relative);
+				font-weight: 300;
+				top: 38px;
+			}
+			#spot{
+				@include size(16px);
+				@include prefixer(animation, (fadeIn 4s, fadeOut 2s), webkit moz ms);
+				animation-iteration-count: infinite;
+			}
+			h1{
+				color: $grey;
+				font-size: $h1;
+			}
+			h2{
+				@include display(inline-block);
+				&:after{
+					content: "";
+				}
+			}
+			h1, h2, h3{
+				@include transition (none);
+				@include prefixer(text-shadow, none, webkit moz spec o ms);
+				&:hover{
+					@include prefixer(text-shadow, none, webkit moz spec o ms);
+
+				}
+			}
+		}
+		#center_panel-brackets_container{
+			#center_panel-player{
+				@include position(relative);
+				@include size(640px 360px);
+				background: red;
+				margin: 0 auto;
+				top: 39px;
+			}
+		}
+		#center_panel-description{
+			@extend .text-left;
+			@include min-size(768px 251px);
+			@include size(768px auto);
+			background: url($bg-stripe-black) repeat;
+			margin-top: -35px;
+			.description{
+				@include change-font-set('open', $lightGrey, 20px, 300);
+				padding: 20px;
+			}
+			h2{
+				color: $lightGrey;
+				font-weight: 300;
+			}
+		}
+		footer{
+			@include position(relative);
+			top: $font-base;
+		}
 	}
 }

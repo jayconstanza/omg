@@ -80,11 +80,8 @@ a{
 	}
 }
 body{
+	@include change-font-set('open', $grey, $font-base, 300);
 	background: url($bg-stripe-white) repeat transparent;
-	color: $grey;
-	font-family: 'open';
-	font-size: 16px;
-	font-weight: 300;
 }
 body > .container-fluid{
 	@include position(relative);
@@ -92,29 +89,25 @@ body > .container-fluid{
 h1{
 	@include font-size($h1);
 	font-family: 'open';
-	font-size: 16px;
 	font-weight: 400;
 }
 h2{
 	@include font-size($h2);
 	font-family: 'open';
-	font-size: 16px;
 	font-weight: 400;
 }
 h3{
 	@include font-size($h3);
 	font-family: 'open';
-	font-size: 16px;
 	font-weight: 400;
 }
 h4{
 	@include font-size($h4);
 	font-family: 'open';
-	font-size: 16px;
 	font-weight: 400;
 }
 html{
-	font-size: 16px;
+	@include change-font-set('open', $grey, $font-base, 300);
 }
 
 /*-----  End of TAGS  ------*/
@@ -126,10 +119,11 @@ html{
 
 #ajax_container{
 	@extend .text-center;
-	@include min-size(auto 773px);
+	@include min-size(auto 768px);
 	@include position(relative);
 	@include size(100%);
 	#center_panel{
+		@include display(inline-block);
 		@include size(100%);
 		#center_panel-brackets_container{
 			@include size(768px 437px);

@@ -1,10 +1,7 @@
 'use strict';
 
 angular.module('VideosModule', [])
-  .controller('VideosCtrl', function ($scope) {
-    $scope.videos = [
-      'vid1',
-      'vidCaca',
-
-    ];
-  });
+  .controller('VideosCtrl', [ '$scope', 'YoutubeService', function ($scope, YoutubeService) {
+    $scope.section = 'videos';
+    $scope.videoList = YoutubeService.getVideoList();
+  }]);

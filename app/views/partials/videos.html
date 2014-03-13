@@ -1,4 +1,24 @@
 <div data-extend-template="/layout.html">
-	<h1 data-block-prepend="center_panel-header">SOY EL CENTER PANEL DE LOS VIDEOS</h1>
-	<div data-block-prepend="center_panel-brackets_container" id="center_panel-player"></div>
+	<h1 data-block-append="center_panel-header" class="fancy">#nowplaying</h1>
+	<div data-block-append="center_panel-header">
+		<span>[</span><img src="images/icons/spot_64x64.png" alt="" id="spot"><span>]</span>
+		<h1 class="video-title">"Putas Asesinas" de Roberto Bolaño</h1>
+	</div>
+	<div data-block-append="center_panel-brackets_container" id="center_panel-player">
+		<iframe id="ytplayer" type="text/html" width="640" height="360"
+		src="http://www.youtube.com/embed/_Ah2nTHgMCI"
+		frameborder="0"/>
+	</div>
+	<ul data-block-append="right_nav" class="list-unstyled">
+		<li ng-repeat="v in videoList">
+			<img class="thumbnail" data-videoId="{{ v.snippet.resourceId.videoId }}"
+			src="{{ v.snippet.thumbnails.default.url }}" alt="{{ v.snippet.title }}"
+			data-description="{{ v.snippet.description }}"/>
+		</li>
+	</ul>
+	<div data-block-append="center_panel-description">
+		<p class="description">
+			Vídeo promocional de l'adaptació teatral del conte "Putas Asesinas" de Roberto Bolaño. 
+		</p>
+	</div>
 </div>

@@ -18,7 +18,7 @@ $lightGrey: rgb(233,233,233);
 
 /*==========  FONTS  ==========*/
 
-$font-base: 14px;
+$font-base: 16px;
 $h1: 36px;
 $h2: 24px;
 $h3: 18px;
@@ -44,10 +44,13 @@ $bg-stripe-white: "../../images/patterns/pattern_white_stripes_256x256.jpg";
 	font-size: $size;
 	line-height: $size;
 }
-@mixin change-font-set($family, $color, $size){
+@mixin change-font-set($family, $color, $size, $weight...){
+    $w: if(length($weight) == 0, normal, $weight);
+
 	color: $color;
 	font-family: $family;
-	font-size: $size;
+    font-weight: $w;
+	@include font-size($size);
 }
 
 /*-----  End of MIXINS  ------*/

@@ -6,6 +6,7 @@ angular.module('codeApp', [
   'ngAnimate',
   'angular-blocks',
   'Directives',
+  'Services',
   'HomeModule',
   'VideosModule'
 ])

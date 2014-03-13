@@ -66,8 +66,8 @@
 		}
 		#menu-icon-logo{
 			&:hover {
-				@include prefixer(animation, (bounceIn 1s), webkit moz ms);
-				animation: bounceIn 1s;
+				// @include prefixer(animation, (bounceIn 1s), webkit moz ms);
+				// animation: bounceIn 1s;
 			}
 		}
 		#menu-icon-videos{

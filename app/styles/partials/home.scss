@@ -6,8 +6,8 @@
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'bourbon/app/assets/stylesheets/_bourbon';
 @import '../styles/helpers/mixins';
-
-#center_panel{
+//important to add the class related to each section
+#center_panel.home{
 	header{
 		h1{
 			font-size: 80px;
@@ -35,7 +35,6 @@
 			margin: 0 auto;
 			top: 48px;
 			position: relative;
-			// animation: rotate 7s infinite linear;
 			figure{
 				@include position(relative);
 				margin: 0 auto;
@@ -47,9 +46,15 @@
 			}
 		}
 	}
+	#center_panel-description{
+		@include display(none);
+	}
 	#center_panel-keywords{
 		@extend .text-left;
 		@include size(768px auto);
+	}
+	#right_nav{
+		@include display(none);
 	}
 	footer{}
 }

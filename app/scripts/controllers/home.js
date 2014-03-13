@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('HomeModule', [])
-.controller('HomeCtrl', function ($scope, $rootScope, $window) {
+.controller('HomeCtrl', [ '$scope', '$rootScope', '$window', function ($scope, $rootScope, $window) {
 	$rootScope.menuItems = [
 		{ name: 'Home', href:'/home', img:'/images/icons/nav/logo.png', id:'menu-icon-logo' },
 		{ name: 'Videos', href:'/videos', img:'/images/icons/nav/videos.png', id:'menu-icon-videos' },
@@ -20,4 +20,5 @@ angular.module('HomeModule', [])
 		{ klass: 'icon-gplus', url: 'https://plus.google.com/share?url='+document.URL },
 	];
 	$rootScope.likes = false;
-});
+	$scope.section = 'home';
+}]);

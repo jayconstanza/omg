@@ -1,0 +1,25 @@
+/**
+*
+* SCSS FILE FOR THE MODULE: app/styles/modules/right_nav.scss
+* @author Derrick Roccka
+**/
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'bourbon/app/assets/stylesheets/_bourbon';
+@import '../styles/helpers/mixins';
+#ajax_container.videos{
+	#right_nav{
+		@include display(inline-block);
+		@include size(128px 768px);
+		@include min-size(128px 768px);
+		position: absolute;
+		top: 0;
+		right: 0;
+		.thumbnail{
+			@include size(128px);
+			border-radius: 0px;
+			border: none;
+			cursor: pointer;
+			margin-bottom: 0px;
+		}
+	}
+}
