@@ -15,11 +15,37 @@
 		top: 0;
 		right: 0;
 		.thumbnail{
-			@include size(128px);
+			@include size(100%);
 			border-radius: 0px;
 			border: none;
 			cursor: pointer;
 			margin-bottom: 0px;
+			padding: 0;
+		}
+		.thumbnail-wrap{
+			@extend .text-center;
+			@include min-size(24px 128px);
+			@include position(relative);
+			@include size(24px 128px);
+			-webkit-box-shadow: -7px 0px 5px 0px rgba(80, 50, 50, 0.64);
+			-moz-box-shadow:    -7px 0px 5px 0px rgba(80, 50, 50, 0.64);
+			box-shadow:         -7px 0px 5px 0px rgba(80, 50, 50, 0.64);
+
+			background: url($bg-stripe-red) repeat;
+			bottom: 128px;
+			color: $lightGrey;
+			left: 104px;
+			text-transform: uppercase;
+			img{
+				@include position(relative);
+				@include size(16px);
+				top: 56px;
+			}
+		}
+		li{
+			@include size(128px);
+			margin: 0 0 1px 0;
+			max-height: 128px;
 		}
 	}
 }
