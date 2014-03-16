@@ -1,0 +1,15 @@
+<div data-extend-template="/layout.html">
+	<div data-block-append="center_panel-brackets_container">
+		<script>
+		var userFeed = new Instafeed({
+			get: 'user',
+			userId: 534772598,
+			accessToken: '534772598.467ede5.c9bd06650e5a4d07a4d032cf1b078433',
+			limit: 8,
+			resolution: 'thumbnail'
+		});
+		userFeed.run();
+		</script>
+		<div id="instafeed"></div>
+	</div>
+</div>

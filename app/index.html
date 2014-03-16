@@ -13,11 +13,11 @@
 	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 	<!-- build:css styles/vendor.css -->
 	<!-- bower:css -->
-	<link rel="stylesheet" href="bower_components/sass-bootstrap/dist/css/bootstrap.css" />
+	<link rel="stylesheet" href="/bower_components/sass-bootstrap/dist/css/bootstrap.css" />
 	<!-- endbower -->
 	<!-- endbuild -->
 	<!-- build:css({.tmp,app}) styles/main.css -->
-	<link rel="stylesheet" href="styles/main.css">
+	<link rel="stylesheet" href="/styles/main.css">
 	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/2.0/animate.min.css">
 	<!-- endbuild -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
@@ -32,7 +32,7 @@
 	<!-- Add your site or application content here -->
 	
 	<div class="container-fluid" ng-view=""></div>
-	<ng-include src="'views/modules/footer.html'"></ng-include>
+	<ng-include src="'/views/modules/footer.html'"></ng-include>
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
 	 <script>
@@ -52,24 +52,26 @@
 
 	<!-- build:js scripts/vendor.js -->
 	<!-- bower:js -->
-	<script src="bower_components/jquery/jquery.js"></script>
-	<script src="bower_components/angular/angular.js"></script>
-	<script src="bower_components/sass-bootstrap/dist/js/bootstrap.js"></script>
-	<script src="bower_components/angular-resource/angular-resource.js"></script>
-	<script src="bower_components/angular-route/angular-route.js"></script>
-	<script src="bower_components/angular-blocks/dist/angular-blocks.min.js"></script>
-	<script src="bower_components/angular-blocks/src/angular-blocks.js"></script>
-	<script src="bower_components/angular-animate/angular-animate.js"></script>
+	<script src="/bower_components/jquery/jquery.js"></script>
+	<script src="/bower_components/angular/angular.js"></script>
+	<script src="/bower_components/sass-bootstrap/dist/js/bootstrap.js"></script>
+	<script src="/bower_components/angular-resource/angular-resource.js"></script>
+	<script src="/bower_components/angular-route/angular-route.js"></script>
+	<script src="/bower_components/angular-blocks/dist/angular-blocks.min.js"></script>
+	<script src="/bower_components/angular-blocks/src/angular-blocks.js"></script>
+	<script src="/bower_components/angular-animate/angular-animate.js"></script>
 	<!-- endbower -->
 	<!-- endbuild -->
-
+	<script src="/bower_components/instafeed.js/instafeed.min.js"></script>
+	
 		<!-- build:js({.tmp,app}) scripts/scripts.js -->
-		<script src="scripts/app.js"></script>
-		<script src="scripts/directives/directives.js"></script>
-		<script src="scripts/filters/filters.js"></script>
-		<script src="scripts/services/services.js"></script>
-		<script src="scripts/controllers/home.js"></script>
-		<script src="scripts/controllers/videos.js"></script>
+		<script src="/scripts/app.js"></script>
+		<script src="/scripts/directives/directives.js"></script>
+		<script src="/scripts/filters/filters.js"></script>
+		<script src="/scripts/services/services.js"></script>
+		<script src="/scripts/controllers/home.js"></script>
+		<script src="/scripts/controllers/videos.js"></script>
+		<script src="/scripts/controllers/fotos.js"></script>
 		<!-- endbuild -->
 		<!-- templates -->
 		<!-- the class in {{ section }} sets the current section. Important for css -->

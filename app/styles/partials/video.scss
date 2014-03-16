@@ -45,9 +45,16 @@
 			#center_panel-player{
 				@include position(relative);
 				@include size(640px 360px);
-				background: red;
 				margin: 0 auto;
 				top: 39px;
+				#ytplayer{
+					@include prefixer(transition, (1s width, 1s 1s height), webkit moz spec o ms);
+					@include size(0px 0px);
+					&.current{
+						@include size(640px 360px);
+						@include prefixer(transition-property, (height, width), webkit moz spec o ms);
+					}
+				}
 			}
 		}
 		#center_panel-description{
