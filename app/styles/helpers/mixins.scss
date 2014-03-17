@@ -68,34 +68,7 @@ $bg-stripe-white: "../../images/patterns/pattern_white_stripes_256x256.jpg";
 
 /*==========  SPRITES  ==========*/
 
-[class*="icon-"] {
-    @include inline-block;
-    @include size(32px);
-    background-image: url(../../images/sprites/sprites.png);
-    background-repeat: no-repeat;
-    &:hover{
-    	@include prefixer(animation, (pulse 0.7s), webkit moz ms);
-    }
-}
-.icon-tw {
-    background-position: 0 0;
-    width: 36px;
-}
-.icon-fb {
-    background-position: -36px 0;
-    width: 32px;
-}
-.icon-gplus {
-    background-position: -68px 0;
-    width: 32px;
-}
-.icon-insta {
-    background-position: -100px 0;
-    width: 32px;
-}
-.icon-bubbles {
-    background-position: 0 -32px;
-}
+
 
 /*-----  End of CLASSES  ------*/
 

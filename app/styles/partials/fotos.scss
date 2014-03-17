@@ -1,0 +1,49 @@
+/**
+*
+* SCSS FILE FOR THE PARTIAL: app/styles/partials/fotos.scss
+* @author Derrick Roccka
+**/
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'bourbon/app/assets/stylesheets/_bourbon';
+@import '../styles/helpers/mixins';
+//important to add the class related to each section
+#ajax_container{
+	#center_panel.fotos{
+		header{
+
+		}
+		#center_panel-brackets_container{
+			@include size(100%);
+			background: none !important;
+			.insta-photo{
+				@include size(320px auto);
+				background: #fff;
+				float: left;
+				margin: 0 auto;
+				margin-bottom: 2px;
+				margin-right: 2px;
+				padding: 10px 5px 20px 5px;
+				.glyphicon-heart{
+					@include prefixer(animation, (pulse 2s, 1s pulse 2s), moz spec webkit o ms);
+					@include prefixer(transition, (all 2s), moz spec webkit o ms);
+					animation-iteration-count: infinite;
+					&:hover{
+						color: $darkRed;
+						// cursor: pointer; Enable when like action is ready
+					}
+				}
+			}
+		}
+		#center_panel-description{
+			@include display(none);
+		}
+
+		footer{
+			@include position(relative);
+			top: ($font-base * 2);
+		}
+	}
+	#right_nav{
+		@include display(none);
+	}
+}

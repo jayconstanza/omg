@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('FotosModule', [])
-.controller('FotosCtrl', [ function () {
-
+.controller('FotosCtrl', [ '$scope', function ($scope) {
+	$scope.section = 'fotos';
 }]);
