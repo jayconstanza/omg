@@ -17,22 +17,30 @@
 		</li>
 	</ul>
 	<div data-block-append="center_panel-description">
-		<p class="description">
-			{{ videoDesc }}
-		</p>
-		<p class="statistics">
-			<img src="images/icons/reproducciones.png" alt="">
-			<span class="view-count">
-				<b>{{ videoStatistics[0].statistics.viewCount }}</b><br>Reprod.
-			</span>
-			<img src="images/icons/nav/likes.png" alt="">
-			<span class="like-count">
-				<b>{{ videoStatistics[0].statistics.likeCount }}</b><br>OMG's!
-			</span>
-			<img src="images/icons/nav/videos.png" alt="">
-			<span class="duration">
-				<b>{{ videoStatistics[0].contentDetails.duration | durationFilter }}</b>min<br>aprx.
-			</span>
-		</p>
+		<article>
+			<p class="description">
+				{{ videoDesc }}
+			</p>
+		</article>
+		<article class="statistics">
+			<section class="statistic">
+				<img src="images/icons/reproducciones.png" alt="">
+				<span class="view-count">
+					<b>{{ videoStatistics[0].statistics.viewCount }}</b><br>Reprod.
+				</span>
+			</section>
+			<section class="statistic">
+				<img src="images/icons/nav/likes.png" alt="">
+				<span class="like-count">
+					<b>{{ videoStatistics[0].statistics.likeCount }}</b><br>OMG's!
+				</span>
+			</section>
+			<section class="statistic">
+				<img src="images/icons/nav/videos.png" alt="">
+				<span class="duration">
+					<b>{{ videoStatistics[0].contentDetails.duration | durationFilter }}</b>min<br>aprx.
+				</span>
+			</section>
+		</article>
 	</div>
 </div>

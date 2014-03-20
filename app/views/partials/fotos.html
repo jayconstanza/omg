@@ -5,12 +5,13 @@
 			get: 'user',
 			userId: 534772598,
 			accessToken: '534772598.467ede5.c9bd06650e5a4d07a4d032cf1b078433',
-			limit: 6,
+			limit: 12,
 			resolution: 'low_resolution',
 			template: '<figure class="insta-photo"><a href="{{link}}"><img src="{{image}}" /></a><figcaption class="like-count"><br>{{caption}}<br>{{likes}}&nbsp;<span class="glyphicon glyphicon-heart"></span></figcaption></figure>'
 		});
 		userFeed.run();
 		</script>
 		<div id="instafeed"></div>
+		<button ng-next-six start="start" step="step" limit="limit">Start {{ start }}</button>
 	</div>
 </div>

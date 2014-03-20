@@ -1,0 +1,47 @@
+/**
+*
+* SCSS FILE FOR THE PARTIAL: app/styles/partials/social.scss
+* @author Derrick Roccka
+**/
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'bourbon/app/assets/stylesheets/_bourbon';
+@import '../styles/helpers/mixins';
+//important to add the class related to each section
+#ajax_container{
+	#center_panel.social{
+		header{
+			@include size(100% auto);
+			margin: 0 auto;
+			h1{
+				font-size: $font-base * 4;
+			}
+			h1, h2, h3{
+				// @extend .text-left;
+				@include display(block);
+				@include transition (all 1.1s cubic-bezier(0,1.37,.1,.27));
+				@include prefixer(text-shadow, (-0.08em 0px 0px rgba(255, 0, 0, 0.74), 0.08em 0px 0px rgba(0, 238, 238, 0.83)), webkit moz spec o ms);
+				&:hover{
+					@include prefixer(text-shadow, (-0.08em 0px 3px rgba(255, 0, 0, 0.74), 0.08em 0px 0px rgba(0, 238, 238, 0.83)), webkit moz spec o ms);
+
+				}
+			}
+		}
+		#center_panel-brackets_container{
+			@include size(100%);
+			background: none !important;
+			margin: 0 auto;
+			li{
+				border-bottom: 5px solid #fff;
+			}
+		}
+		#center_panel-description{
+			@include display(none);
+		}
+		footer{
+
+		}
+	}
+	#right_nav{
+		@include display(none);
+	}
+}

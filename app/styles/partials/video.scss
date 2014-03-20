@@ -42,9 +42,11 @@
 			}
 		}
 		#center_panel-brackets_container{
+			@include size(640px 360px);
+			background: none !important;
 			#center_panel-player{
 				@include position(relative);
-				@include size(640px 360px);
+				@include size(100%);
 				margin: 0 auto;
 				top: 39px;
 				#ytplayer{
@@ -59,10 +61,10 @@
 		}
 		#center_panel-description{
 			@extend .text-left;
-			@include min-size(768px 251px);
-			@include size(768px auto);
+			@include min-size(640px 251px);
+			@include size(640px auto);
 			background: url($bg-stripe-black) repeat;
-			margin-top: -35px;
+			margin-top: 39px;
 			.description{
 				@include change-font-set('open', $lightGrey, 18px, 300);
 				padding: 36px;
@@ -70,14 +72,17 @@
 			.statistics{
 				@include change-font-set('open', $lightGrey, 16px, 300);
 				padding: 36px;
-				.view-count, .like-count, .duration{
+				.statistic{
 					@include display(inline-block);
-					margin: 0 8px 0 0;
-				}
-				img{
-					@include display(inline-block);
-					@include size(32px);
-					margin: -20px 0 0 0;
+					.duration, .like-count, .view-count {
+						@include display(inline-block);
+						margin: 0 8px 0 0;
+					}
+					img{
+						@include display(inline-block);
+						@include size(32px);
+						margin: -20px 0 0 0;
+					}
 				}
 			}
 			h2{

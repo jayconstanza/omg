@@ -10,7 +10,8 @@ angular.module('codeApp', [
   'Services',
   'HomeModule',
   'VideosModule',
-  'FotosModule'
+  'FotosModule',
+  'SocialModule'
 ])
   .config([ '$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider
@@ -25,6 +26,10 @@ angular.module('codeApp', [
       .when('/fotos', {
         templateUrl: '/views/partials/fotos.html',
         controller: 'FotosCtrl'
+      })
+      .when('/social', {
+        templateUrl: '/views/partials/social.html',
+        controller: 'SocialCtrl'
       })
       .otherwise({
         redirectTo: '/'

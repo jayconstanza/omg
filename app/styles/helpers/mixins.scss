@@ -13,7 +13,7 @@
 /*==========  COLORS  ==========*/
 
 $darkRed: rgb(173,42,42);
-$grey: rgb(46,46,46);
+$grey: rgb(26,26,26);
 $lightGrey: rgb(233,233,233);
 
 /*==========  FONTS  ==========*/
@@ -27,9 +27,12 @@ $font-fancy: "archi";
 
 /*==========  IMAGES  ==========*/
 
-$bg-stripe-black: "../../images/patterns/pattern_black_stripes_256x256.jpg";
-$bg-stripe-red: "../../images/patterns/pattern_red_stripes_256x256.jpg";
-$bg-stripe-white: "../../images/patterns/pattern_white_stripes_256x256.jpg";
+// $bg-stripe-black: "../../images/patterns/pattern_black_stripes_256x256.jpg";
+// $bg-stripe-red: "../../images/patterns/pattern_red_stripes_256x256.jpg";
+// $bg-stripe-white: "../../images/patterns/pattern_white_stripes_256x256.jpg";
+$bg-stripe-black: "/images/patterns/pattern_black_stripes_256x256.jpg";
+$bg-stripe-red: "/images/patterns/pattern_red_stripes_256x256.jpg";
+$bg-stripe-white: "/images/patterns/pattern_white_stripes_256x256.jpg";
 
 /*-----  End of VARIABLES  ------*/
 
@@ -45,12 +48,12 @@ $bg-stripe-white: "../../images/patterns/pattern_white_stripes_256x256.jpg";
 	line-height: $size;
 }
 @mixin change-font-set($family, $color, $size, $weight...){
-    $f: if(length($family) == 0, 'open', $family);
-    $w: if(length($weight) == 0, normal, $weight);
+	$f: if(length($family) == 0, 'open', $family);
+	$w: if(length($weight) == 0, normal, $weight);
 
 	color: $color;
 	font-family: $f;
-    font-weight: $w;
+	font-weight: $w;
 	@include font-size($size);
 }
 

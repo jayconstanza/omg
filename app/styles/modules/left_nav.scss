@@ -12,7 +12,7 @@
 	position: relative;
 	li{
 		@include size(100% 128px);
-		background: url($bg-stripe-black) repeat;
+		background: $grey;
 		margin: 0 0 1px 0;
 
 		/*===============================
@@ -72,34 +72,31 @@
 		}
 		#menu-icon-videos{
 			&:hover {
-				@include prefixer(animation, (rotate 1s), webkit moz ms);
-				animation: rotate 1s;
+				@include prefixer(animation, (rotate 1s), webkit moz ms o spec);
+				// animation: rotate 1s;
 			}
 		}
 		#menu-icon-likes{
 			&:hover {
-				@include prefixer(animation, (pulse 0.7s), webkit moz ms);
-				animation: pulse 0.7s;
+				@include prefixer(animation, (pulse 0.7s), webkit moz ms o spec);
+				// animation: pulse 0.7s;
 			}
 		}
 		#menu-icon-sobre{
 			&:hover {
-				@include prefixer(animation, (bounce 0.7s), webkit moz ms);
-				animation: bounce 0.7s;
+				@include prefixer(animation, (bounce 0.7s), webkit moz ms o spec);
+				// animation: bounce 0.7s;
 			}
 		}
 		#menu-icon-fotos{
 			&:hover {
-				-webkit-animation: rotate 0.3s, 0.5s flash 0.2s;
-				-moz-animation: rotate 0.3s, 0.5s flash 0.2s;
-				-ms-animation: rotate 0.3s, 0.5s flash 0.2s;
-				animation: rotate 0.3s, 0.5s flash 0.2s;
+				@include prefixer(animation, (rotate 0.6s, 0.5s flash 0.2s), webkit moz ms o spec);
 			}
 		}
 		#menu-icon-social{
 			&:hover {
-				@include prefixer(animation, (tada 0.7s), webkit moz ms);
-				animation: tada 0.7s;
+				@include prefixer(animation, (tada 0.7s), webkit moz ms o spec);
+				// animation: tada 0.7s;
 			}
 		}
 
