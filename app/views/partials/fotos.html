@@ -1,19 +1,18 @@
 <div data-extend-template="/layout.html">
 	<div data-block-append="center_panel-brackets_container">
-		<button ng-next-six start="start" step="step" limit="limit" first="first">Start {{ start }}</button>
-		<div id="instafeed"></div>
-
 		<script>
 		var userFeed = new Instafeed({
 			get: 'user',
 			userId: 534772598,
 			accessToken: '534772598.467ede5.c9bd06650e5a4d07a4d032cf1b078433',
-			limit: 18,
+			limit: 6,
 			resolution: 'low_resolution',
-			template: '<figure class="insta-photo hidden"><a href="{{link}}"><img src="{{image}}" /></a><figcaption class="like-count"><br>{{caption}}<br>{{likes}}&nbsp;<span class="glyphicon glyphicon-heart"></span></figcaption></figure>'
+			template: '<figure class="insta-photo"><a href="{{link}}"><img src="{{image}}" /></a><figcaption class="like-count"><br>{{caption}}<br>{{likes}}&nbsp;<span class="glyphicon glyphicon-heart"></span></figcaption></figure>'
 		});
 		userFeed.run();
 		</script>
-		
+		<div id="instafeed"></div>
+
+		<!-- <button ng-show-next start="start" step="step" limit="limit" first="first">Start {{ start }}</button> -->
 	</div>
 </div>

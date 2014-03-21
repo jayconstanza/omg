@@ -60,3 +60,39 @@
 		@include display(none);
 	}
 }
+
+/*=====================================
+=            MEDIA QUERIES            =
+=====================================*/
+
+@media only screen and (max-width: 480px){
+	#ajax_container{
+		#center_panel.home{
+			header{
+				@extend .text-center;
+				h1{
+					font-size: $font-base * 3;
+				}
+			}
+			#center_panel-brackets_container{
+				#center_panel-logo{
+					@include size(160px);
+					top: 15px;
+					figure{
+						top: 27px;
+						width: 90px;
+						img{
+							width: 90px;
+						}
+					}
+				}
+			}
+			#center_panel-keywords{
+				@include size(100% auto);
+			}
+		}
+	}
+}
+
+/*-----  End of MEDIA QUERIES  ------*/
+

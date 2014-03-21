@@ -4,12 +4,19 @@ angular.module('Directives', [])
 .directive('ngAdapt', [ '$window', '$rootScope', function($window, $rootScope) {
 	return {
 		scope: {
-			num: '&px'
+			num: '=px'
 		},
 		link: function(scope, element) {
 			var win = angular.element($window);
 			$rootScope.$watch('windowSize.width', function(newVal){
-				angular.element(element).css('width', newVal - scope.num() - 15);
+				if(newVal > 768){
+					scope.num = 128;
+					angular.element(element).css('width', newVal - scope.num - 15);
+				}
+				else{
+					scope.num = 0;
+					angular.element(element).css('width', '100%');
+				}
 			});
 			win.bind('resize', function(){
 				$rootScope.$apply(function(){
@@ -68,7 +75,7 @@ angular.module('Directives', [])
 		}
 	};
 }])
-.directive('ngNextSix', [ '$document', function($document) {
+.directive('ngShowNext', [ '$document', function($document) {
 	return {
 		restrict: 'A',
 		scope: {
@@ -85,29 +92,18 @@ angular.module('Directives', [])
 				}
 				return array;
 			}
-			var instafeed = $document[0].getElementById('instafeed');
-			var children = instafeed.children;
-			var childrenArray = toArray(children);
-			var firstBlock = childrenArray.slice(scope.start,(scope.start+scope.step()));
-			if(scope.first === true){
-				angular.forEach(firstBlock, function(item){
-					angular.element(item).removeClass('hidden');
-				});
-				scope.first = false;
-				/**
-				
-					TODO:
-					- ON LOAD SHOW FIRST SIX
-					- ON REACHING THE END, RESTART BUTTON
-					- DOING THE SAME BUT WITH PREV
-				
-				**/
-				
-			}
+
+			// 		TODO:
+			// 		- ON LOAD SHOW FIRST SIX
+			// 		- ON REACHING THE END, RESTART BUTTON
+			// 		- DOING THE SAME BUT WITH PREV
+
+			// 		**/
+
 			element.bind('click', function(){
-				instafeed = $document[0].getElementById('instafeed');
-				children = instafeed.children;
-				childrenArray = toArray(children);
+				var instafeed = $document[0].getElementById('instafeed');
+				var children = instafeed.children;
+				var childrenArray = toArray(children);
 				var prevBlock = childrenArray.slice(scope.start,(scope.start+scope.step()));
 				scope.start = scope.start+scope.step();
 				var nextBlock = childrenArray.slice(scope.start,(scope.start+scope.step()));
@@ -123,6 +119,7 @@ angular.module('Directives', [])
 					console.log(instafeed);
 				});
 			});
+
 		}
 	};
 }]);

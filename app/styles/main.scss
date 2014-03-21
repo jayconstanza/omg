@@ -58,7 +58,6 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 @import '../styles/helpers/mixins';
 @import '../styles/modules/left_nav';
 @import '../styles/modules/right_nav';
-@import '../styles/modules/heading';
 @import '../styles/modules/footer';
 @import '../styles/partials/home';
 @import '../styles/partials/video';
@@ -174,3 +173,23 @@ html{
 }
 
 /*-----  End of ID'S  ------*/
+
+/*=====================================
+=            MEDIA QUERIES            =
+=====================================*/
+
+@media only screen and (max-width: 480px){
+	#ajax_container{
+		@include min-size(auto 480px);
+		@include position(relative);
+		@include size(100%);
+		#center_panel{
+			#center_panel-brackets_container{
+				@include size(320 182px);
+			}
+		}
+	}
+}
+
+/*-----  End of MEDIA QUERIES  ------*/
+

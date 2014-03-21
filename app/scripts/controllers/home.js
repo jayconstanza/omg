@@ -20,5 +20,6 @@ angular.module('HomeModule', [])
 		{ klass: 'icon-gplus', url: 'https://plus.google.com/share?url='+document.URL },
 	];
 	$rootScope.likes = false;
+	$scope.num = 128;
 	$scope.section = 'home';
 }]);

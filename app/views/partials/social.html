@@ -2,6 +2,13 @@
 	<div class="center-block" data-block-append="center_panel-header">
 		<h1>{{ title }}</h1>
 		<h2>{{ subtitle }}</h2>
+		<div class="center-block">
+			<ul class="list-inline">
+				<li ng-repeat="r in redesSociales">
+					<h3 ><a href="{{ r.url }}">{{ r.name }}</a></h3>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<div twitter-timeline="446240500819841024" auto-resize="true" data-block-append="center_panel-brackets_container"
 	css-url="" data-tweet-limit="5">Cargando los tweets...</div>

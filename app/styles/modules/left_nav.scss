@@ -141,3 +141,82 @@
 	}
 }
 
+/*=====================================
+=            MEDIA QUERIES            =
+=====================================*/
+
+@media only screen and (max-width: 480px){
+	#left_nav{
+		@include position(fixed);
+		@include size(100% 48px);
+		bottom: 0;
+		left: 0;
+		z-index: 10000;
+		ul{
+			@include min-size(100% 48px);
+			@include position(relative);
+			@include size(100% 48px);
+			bottom: 0;
+			left: 0;
+			li{
+				@include size(20% 48px);
+				background: $grey;
+				margin: 0 0 0px 0;
+
+				/*===============================
+				=            CLASSES            =
+				===============================*/
+				
+				// this is the box that has the like buttons
+				.menu_likes{
+					@include display(none);
+				}
+
+				//this is the wrap that shows the title of the section on hover
+				.menu_wrap{
+					@include display(none);
+				}
+				
+				/*-----  End of CLASSES  ------*/
+				
+				/*============================
+				=            TAGS            =
+				============================*/
+
+				div, a, img{
+					@include size(24px);
+					margin: 0 auto;
+				}
+
+				div{
+					margin-top: 12px;
+				}
+				
+				/*-----  End of TAGS  ------*/
+				
+				/*==================================
+				=            AMPERSANDS            =
+				==================================*/
+				
+				&:first-child{
+					div:not(.menu_wrap){
+						margin-top: 11.15px;
+						img{
+							@include size(auto 25.6px);
+						}
+					}
+				}
+				&:nth-child(3){
+					@include display(none);
+				}
+				&:hover{
+					background: url($bg-stripe-red) repeat;
+				}
+				
+				/*-----  End of AMPERSANDS  ------*/
+			}
+		}
+	}
+}
+
+/*-----  End of MEDIA QUERIES  ------*/
