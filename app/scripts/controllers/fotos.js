@@ -5,5 +5,6 @@ angular.module('FotosModule', [])
 	$scope.section = 'fotos';
 	$scope.start = 1;
 	$scope.step = 6;
-	$scope.limit = 60;
+	$scope.limit = 18;
+	$scope.first = true;
 }]);

@@ -74,7 +74,8 @@ angular.module('Directives', [])
 		scope: {
 			start: '=start',
 			step: '&step',
-			limit: '&limit'
+			limit: '&limit',
+			first: '=first'
 		},
 		link: function (scope, element) {
 			function toArray(obj) {
@@ -84,19 +85,40 @@ angular.module('Directives', [])
 				}
 				return array;
 			}
+			var instafeed = $document[0].getElementById('instafeed');
+			var children = instafeed.children;
+			var childrenArray = toArray(children);
+			var firstBlock = childrenArray.slice(scope.start,(scope.start+scope.step()));
+			if(scope.first === true){
+				angular.forEach(firstBlock, function(item){
+					angular.element(item).removeClass('hidden');
+				});
+				scope.first = false;
+				/**
+				
+					TODO:
+					- ON LOAD SHOW FIRST SIX
+					- ON REACHING THE END, RESTART BUTTON
+					- DOING THE SAME BUT WITH PREV
+				
+				**/
+				
+			}
 			element.bind('click', function(){
-				console.log('scope start', scope.start);
-				console.log('scope step', scope.step());
-				console.log('scope limit', scope.limit());
-				var instafeed = $document[0].getElementById('instafeed');
-				var children = instafeed.children;
-				var childrenArray = toArray(children);
-				var sixBlock = childrenArray.slice(scope.start,(scope.start+scope.step()));
+				instafeed = $document[0].getElementById('instafeed');
+				children = instafeed.children;
+				childrenArray = toArray(children);
+				var prevBlock = childrenArray.slice(scope.start,(scope.start+scope.step()));
 				scope.start = scope.start+scope.step();
+				var nextBlock = childrenArray.slice(scope.start,(scope.start+scope.step()));
 
-				angular.forEach(sixBlock, function(item){
+				angular.forEach(nextBlock, function(item){
+					angular.element(item).removeClass('hidden');
+				});
+				angular.forEach(prevBlock, function(item){
 					angular.element(item).addClass('hidden');
 				});
+
 				scope.$apply(function(){
 					console.log(instafeed);
 				});
