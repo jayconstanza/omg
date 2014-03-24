@@ -88,5 +88,13 @@ $bg-stripe-white: "/images/patterns/pattern_white_stripes_256x256.jpg";
 	}
 }
 
+@keyframes appear {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
 /*-----  End of ANIMATIONS  ------*/
 

@@ -65,13 +65,13 @@
 =            MEDIA QUERIES            =
 =====================================*/
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 768px){
 	#ajax_container{
 		#center_panel.home{
 			header{
-				@extend .text-center;
+				text-align: center;
 				h1{
-					font-size: $font-base * 3;
+					font-size: 3rem;
 				}
 			}
 			#center_panel-brackets_container{
@@ -89,10 +89,40 @@
 			}
 			#center_panel-keywords{
 				@include size(100% auto);
+				text-align: center !important;
 			}
 		}
 	}
 }
 
+@media only screen and (min-width: 768px) and (max-width: 1024px){
+	#ajax_container{
+		#center_panel.home{
+			header{
+				text-align: left;
+				h1{
+					font-size: 4rem;
+				}
+			}
+			#center_panel-brackets_container{
+				#center_panel-logo{
+					@include size(240px);
+					top: 65px;
+					figure{
+						top: 40px;
+						width: 135px;
+						img{
+							width: 135px;
+						}
+					}
+				}
+			}
+			#center_panel-keywords{
+				@include size(100% auto);
+				text-align: center !important;
+			}
+		}
+	}
+}
 /*-----  End of MEDIA QUERIES  ------*/
 

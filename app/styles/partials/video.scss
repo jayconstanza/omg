@@ -11,16 +11,62 @@
 #ajax_container.videos{
 	#center_panel.videos{
 		header{
-			.video-title{
-				@include font-size($h2);
-				@include position(relative);
-				font-weight: 300;
-				top: 38px;
+			@include size(640px auto);
+			margin: 0 auto;
+			#center_panel-video_selector{
+				@include prefixer(animation, (bounce 1s), webkit moz ms);
+				@include size(100% auto);
+				.thumbnail{
+					@extend .pull-left;
+					@include position(relative);
+					@include size(64px);
+					border-radius: 0px;
+					border: none;
+					cursor: pointer;
+					margin-bottom: 0px;
+					padding: 0;
+				}
+				p{
+					@include size(auto 64px);
+					line-height: 64px;
+				}
+				ul{
+					li{
+						@include change-font-set('open', $lightGrey, $font-base);
+						@include size(100% 64px);
+						background: url($bg-stripe-red) repeat;
+						cursor: pointer;
+						// padding: 0 $font-base/2;
+						margin: 0 0 1px 0;
+					}
+				}
+				&.ng-hide{
+					@include prefixer(animation, (hinge 1s), webkit moz ms);
+				}
+				&.ng-hide-add{
+					@include prefixer(animation, (hinge 1s), webkit moz ms);
+				}
+				&.ng-hide-remove{
+					@include prefixer(animation, (bounce 1s), webkit moz ms);
+				}
+				&.ng-hide-add, &.ng-hide-remove{
+					@include display(block !important);
+				}
 			}
 			#spot{
 				@include size(16px);
 				@include prefixer(animation, (fadeIn 4s, fadeOut 2s), webkit moz ms);
 				animation-iteration-count: infinite;
+			}
+			.video-title{
+				@include font-size($h2);
+				@include position(relative);
+				cursor: pointer;
+				font-weight: 300;
+				top: 38px;
+				.glyphicon{
+					cursor: pointer;
+				}
 			}
 			h1{
 				color: $grey;
@@ -96,3 +142,63 @@
 		}
 	}
 }
+
+/*=====================================
+=            MDEIA QUERIES            =
+=====================================*/
+
+@media only screen and (max-width: 480px){
+	#ajax_container.videos{
+		#center_panel.videos{
+			header{
+				@include size(100% auto);
+				#center_panel-video_selector{
+					
+				}
+				.video-title{
+					// @include font-size($h2);
+
+					top: 0px;
+				}
+			}
+			#center_panel-brackets_container{
+				@include size(100% auto);
+				#center_panel-player{
+					@include position(relative);
+					@include size(100%);
+					top: 5px;
+					#ytplayer{
+						&.current{
+							@include min-size(320px 240px);
+							@include size(100% auto);
+						}
+					}
+				}
+			}
+			#center_panel-description{
+				@include min-size(320px 251px);
+				@include size(100% auto);
+				margin-top: 0px;
+				.description{
+					@include change-font-set('open', $lightGrey, 18px, 300);
+					padding: 18px;
+				}
+				.statistics{
+					@include change-font-set('open', $lightGrey, 16px, 300);
+					padding: 18px;
+					.statistic{
+						.duration, .like-count, .view-count {
+							margin: 0 4px 0 0;
+						}
+					}
+				}
+			}
+			footer{
+				@include display(none);
+			}
+		}
+	}
+}
+
+/*-----  End of MDEIA QUERIES  ------*/
+

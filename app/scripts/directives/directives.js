@@ -9,7 +9,7 @@ angular.module('Directives', [])
 		link: function(scope, element) {
 			var win = angular.element($window);
 			$rootScope.$watch('windowSize.width', function(newVal){
-				if(newVal > 768){
+				if(newVal > 767){
 					scope.num = 128;
 					angular.element(element).css('width', newVal - scope.num - 15);
 				}

@@ -13,7 +13,7 @@
 			@include size(100% auto);
 			margin: 0 auto;
 			h1{
-				font-size: $font-base * 4;
+				@include font-size(4rem);
 			}
 			h1, h2, h3{
 				// @extend .text-left;
@@ -45,3 +45,24 @@
 		@include display(none);
 	}
 }
+/*=====================================
+=            MEDIA QUERIES            =
+=====================================*/
+
+@media only screen and (max-width: 480px){
+	#ajax_container{
+		#center_panel.social{
+			header{
+				h1{
+					@include font-size(2rem);
+				}
+			}
+			[data-block="footer"]{
+				@include display(none);
+			}
+		}
+	}
+}
+
+/*-----  End of MEDIA QUERIES  ------*/
+

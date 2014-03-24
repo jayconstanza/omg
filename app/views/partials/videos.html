@@ -2,7 +2,15 @@
 	<h1 data-block-append="center_panel-header" class="fancy">#nowplaying</h1>
 	<div data-block-append="center_panel-header">
 		<span>[</span><img src="images/icons/spot_64x64.png" alt="" id="spot"><span>]</span>
-		<h1 class="video-title">{{ videoTitle }}</h1>
+		<h1 class="video-title" ng-click="list = !list">{{ videoTitle }}<br><span class="glyphicon glyphicon-chevron-down" ng-show="!list"></span><span class="glyphicon glyphicon-chevron-up" ng-show="list"></span></h1>
+		<nav class="center-block" id="center_panel-video_selector" ng-show="list">
+			<ul class="list-unstyled" ng-click="list = false">
+				<li ng-repeat="v in videoList" ng-click="videoChange(v.snippet.title, v.snippet.resourceId.videoId, v.snippet.description);" class="video-title" ng-mouseenter="play = !play" ng-mouseleave="play = !play">
+					<img class="thumbnail" src="{{ v.snippet.thumbnails.default.url }}" alt="{{ v.snippet.title }}">
+					<p>{{ v.snippet.title }}</p>&nbsp;<span class="glyphicon glyphicon-play" ng-show="play"></span>
+				</li>
+			</ul>
+		</nav>
 	</div>
 	<div data-block-append="center_panel-brackets_container" id="center_panel-player">
 		<iframe id="ytplayer" type="text/html" ng-src="{{ videoURL }}" frameborder="0" class="current"/>
@@ -10,12 +18,13 @@
 	<ul data-block-append="right_nav" class="list-unstyled">
 		<li ng-repeat="v in videoList" ng-mouseenter="show = !show" ng-mouseleave="show = !show">
 			<img class="thumbnail" src="{{ v.snippet.thumbnails.default.url }}" alt="{{ v.snippet.title }}"
-			ng-click="videoChange(v.snippet.title, v.snippet.resourceId.videoId, v.snippet.description);"/>
+			ng-click="videoChange(v.snippet.title, v.snippet.resourceId.videoId, v.snippet.description);">
 			<div ng-show="show" class="thumbnail-wrap">
-				<img src="images/icons/social/youtube.png" alt="Icono de YouTube">
+				<img src="/images/icons/social/youtube.png" alt="Icono de YouTube">
 			</div>
 		</li>
-	</ul>
+	</ul>	
+
 	<div data-block-append="center_panel-description">
 		<article>
 			<p class="description">

@@ -49,3 +49,18 @@
 		}
 	}
 }
+
+/*=====================================
+=            MEDIA QUERIES            =
+=====================================*/
+
+@media only screen and (max-width: 480px){
+	#ajax_container.videos{
+		#right_nav{
+			@include display(none);
+		}
+	}	
+}
+
+/*-----  End of MEDIA QUERIES  ------*/
+
