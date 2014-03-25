@@ -147,7 +147,7 @@
 =            MDEIA QUERIES            =
 =====================================*/
 
-@media only screen and (max-width: 480px){
+@media only screen and (max-width: 768px){
 	#ajax_container.videos{
 		#center_panel.videos{
 			header{
@@ -170,7 +170,7 @@
 					#ytplayer{
 						&.current{
 							@include min-size(320px 240px);
-							@include size(100% auto);
+							width: 100%;
 						}
 					}
 				}
