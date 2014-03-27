@@ -63,7 +63,7 @@
 				@include position(relative);
 				cursor: pointer;
 				font-weight: 300;
-				top: 38px;
+				top: 16px;
 				.glyphicon{
 					cursor: pointer;
 				}
@@ -94,13 +94,15 @@
 				@include position(relative);
 				@include size(100%);
 				margin: 0 auto;
-				top: 39px;
+				top: 4px;
+				z-index: 10000;
 				#ytplayer{
 					@include prefixer(transition, (1s width, 1s 1s height), webkit moz spec o ms);
 					@include size(0px 0px);
 					&.current{
 						@include size(640px 360px);
 						@include prefixer(transition-property, (height, width), webkit moz spec o ms);
+						z-index: 10000;
 					}
 				}
 			}
@@ -110,7 +112,7 @@
 			@include min-size(640px 251px);
 			@include size(640px auto);
 			background: url($bg-stripe-black) repeat;
-			margin-top: 39px;
+			margin-top: 4px;
 			.description{
 				@include change-font-set('open', $lightGrey, 18px, 300);
 				padding: 36px;
@@ -139,6 +141,43 @@
 		footer{
 			@include position(relative);
 			top: $font-base;
+		}
+	}
+	#lights{
+		@include min-size(100%);
+		@include position(fixed);
+		@include prefixer(transition, opacity 1.5s, webkit moz ms o spec);
+		@include size(100%);
+		background: darken($grey, 10%);
+		left: 0;
+		opacity: 0.9;
+		top: 0;
+		z-index: 9999;
+		&.ng-hide{
+			@include prefixer(transition, opacity 1.5s, webkit moz ms o spec);
+			opacity: 0;
+		}
+		&.ng-hide-add{
+			@include prefixer(transition, opacity 1.5s, webkit moz ms o spec);
+		}
+		&.ng-hide-remove{
+			@include prefixer(transition, opacity 1.5s, webkit moz ms o spec);
+		}
+		&.ng-hide-add, &.ng-hide-remove{
+			@include display(block !important);
+		}
+	}
+	#lights-switch{
+		@include position(relative);
+		background: none repeat scroll 0% 0% transparent;
+		border: 0;
+		color: #444;
+		font-weight: 300;
+		padding: 0;
+		top: -21px;
+		z-index: 10000;
+		&:hover{
+			color: #fff;
 		}
 	}
 }

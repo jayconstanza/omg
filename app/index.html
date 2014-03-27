@@ -18,9 +18,9 @@
 	<!-- endbuild -->
 	<!-- build:css({.tmp,app}) styles/main.css -->
 	<link rel="stylesheet" href="/styles/main.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/2.0/animate.min.css">
 	<!-- endbuild -->
-	<script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/2.0/animate.min.css">
+	<!-- // <script src="//cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script> -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
 
   </head>
@@ -63,12 +63,24 @@
 	<!-- endbower -->
 	<!-- endbuild -->
 	<script src="/bower_components/instafeed.js/instafeed.min.js"></script>
+
+	<!-- build:js({.tmp,app}) scripts/scripts.js -->
+	<script src="/scripts/filters/filters.js"></script>
+	<script src="/scripts/services/services.js"></script>
+	<script src="/scripts/directives/directives.js"></script>
+	<script src="/scripts/controllers/home.js"></script>
+	<script src="/scripts/controllers/videos.js"></script>
+	<script src="/scripts/controllers/fotos.js"></script>
+	<script src="/scripts/controllers/social.js"></script>
+	<script src="/scripts/controllers/about_me.js"></script>
+	<script src="/scripts/app.js"></script>
+	<!-- endbuild -->
 	<!-- templates -->
 	<!-- the class in {{ section }} sets the current section. Important for css -->
 	<script type="text/ng-template" id="/layout.html">
 		<ng-include src="'/views/modules/left_nav.html'" class="pull-left"></ng-include>
-		<section id="ajax_container" class="pull-right {{ section }}" ng-adapt px="num">
-			<article id="center_panel" class="pull-left {{ section }}" data-block="center_panel" >
+		<section id="ajax_container" class="pull-right {{ section }}" data-block="ajax_container" ng-adapt px="num">
+			<article id="center_panel" class="pull-left {{ section }}" data-block="center_panel">
 				<header id="center_panel-header" data-block="center_panel-header"></header>
 				<section id="center_panel-brackets_container" data-block="center_panel-brackets_container"></section>
 				<section class="center-block" id="center_panel-description" data-block="center_panel-description"></section>
@@ -85,16 +97,5 @@
 		</section>
 	</script>
 	<!-- endtemplates -->
-	<!-- build:js({.tmp,app}) scripts/scripts.js -->
-	<script src="/scripts/filters/filters.js"></script>
-	<script src="/scripts/services/services.js"></script>
-	<script src="/scripts/directives/directives.js"></script>
-	<script src="/scripts/controllers/home.js"></script>
-	<script src="/scripts/controllers/videos.js"></script>
-	<script src="/scripts/controllers/fotos.js"></script>
-	<script src="/scripts/controllers/social.js"></script>
-	<script src="/scripts/app.js"></script>
-	<!-- endbuild -->
-
 </body>
 </html>

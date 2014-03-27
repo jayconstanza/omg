@@ -1,0 +1,30 @@
+/**
+*
+* SCSS FILE FOR THE PARTIAL: app/styles/partials/about_me.scss
+* @author Derrick Roccka
+**/
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'bourbon/app/assets/stylesheets/_bourbon';
+@import '../styles/helpers/mixins';
+//important to add the class related to each section
+#ajax_container{
+	#center_panel.OMartinGual{
+		header{
+			@include size(640px 360px);
+			margin: 0 auto;
+			h1{
+				@extend .typewriter;
+				@include change-font-set('Courier', $grey, $h2, normal);
+				margin: 0 auto;
+			}
+		}
+		#center_panel-brackets_container{
+			@include size(640px 360px);
+			background: none !important;
+		}
+		#center_panel-description{
+			background: none !important;
+		}
+		footer{}
+	}
+}

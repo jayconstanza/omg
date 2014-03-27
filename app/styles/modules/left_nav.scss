@@ -7,8 +7,8 @@
 @import 'bourbon/app/assets/stylesheets/_bourbon';
 @import '../styles/helpers/mixins';
 #left_nav ul{
-	@include size(128px 768px);
-	@include min-size(auto 768px);
+	@include size(128px 896px);
+	@include min-size(auto 896px);
 	position: relative;
 	li{
 		@include size(100% 128px);
@@ -27,6 +27,28 @@
 			background: url($bg-stripe-black) repeat;
 			left: 128px;
 			top: -32px;
+			z-index: 10000;
+			&.ng-hide-remove, &.ng-hide-add{
+				@include display(block !important);
+				@include transition (all 0.5s linear);
+			}
+			&.ng-hide-remove {
+				@include prefixer(animation, (bounceInLeft 1s), webkit moz ms);
+				animation: bounceInLeft 1s;
+			}
+			&.ng-hide-add {
+				@include prefixer(animation, (bounceOutLeft 1s), webkit moz ms);
+				animation: bounceOutLeft 1s;
+			}
+		}
+
+		.menu_comparte{
+			@include min-size(256px 128px);
+			@include position(absolute);
+			@include size(256px 128px);
+			background: url($bg-stripe-black) repeat;
+			left: 128px;
+			bottom: 0;
 			z-index: 10000;
 			&.ng-hide-remove, &.ng-hide-add{
 				@include display(block !important);
@@ -99,7 +121,12 @@
 				// animation: tada 0.7s;
 			}
 		}
-
+		#menu-icon-comparte{
+			&:hover {
+				@include prefixer(animation, (lightSpeedIn 0.7s), webkit moz ms o spec);
+				// animation: tada 0.7s;
+			}
+		}
 		/*-----  End of EACH ICON OF THE LEFT NAV  ------*/
 		
 		/*============================
@@ -206,7 +233,7 @@
 						}
 					}
 				}
-				&:nth-child(3){
+				&:nth-child(3), &:nth-child(7){
 					@include display(none);
 				}
 				&:hover{
@@ -218,5 +245,7 @@
 		}
 	}
 }
+
+
 
 /*-----  End of MEDIA QUERIES  ------*/

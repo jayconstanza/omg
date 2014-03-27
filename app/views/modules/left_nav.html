@@ -3,7 +3,7 @@
 		<li ng-repeat="item in menuItems" ng-mouseenter="show = !show" ng-mouseleave="show = !show">
 			<div>
 				<a ng-href="{{item.href}}" data-name="{{item.name}}">
-					<img src="{{item.img}}" alt="" id="{{item.id}}" class="menu-icon" ng-click="((item.click == true) && (likes = !likes) || (likes = false))">
+					<img src="{{item.img}}" alt="Ir a la sección {{item.name}}" id="{{item.id}}" class="menu-icon" ng-click="((item.click == true) && (likes = !likes) || (likes = false));((item.click == true) && (comparte = !comparte) || (comparte = false))">
 				</a>
 			</div>
 			<div ng-show="show" class="menu_wrap"><span>{{item.name}}</span></div>
@@ -24,6 +24,7 @@
 					</script>
 				</div>
 			</div>
+			<div ng-show="comparte" class="menu_comparte"></div>
 		</li>
 	</ul>
 </nav>

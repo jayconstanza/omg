@@ -7,11 +7,35 @@ angular.module('Directives', [])
 			num: '=px'
 		},
 		link: function(scope, element) {
+			function getScrollbarWidth() {
+				var outer = document.createElement('div');
+				outer.style.visibility = 'hidden';
+				outer.style.width = '100px';
+				outer.style.msOverflowStyle = 'scrollbar'; // needed for WinJS apps
+
+				document.body.appendChild(outer);
+
+				var widthNoScroll = outer.offsetWidth;
+				// force scrollbars
+				outer.style.overflow = 'scroll';
+
+				// add innerdiv
+				var inner = document.createElement('div');
+				inner.style.width = '100%';
+				outer.appendChild(inner);
+
+				var widthWithScroll = inner.offsetWidth;
+
+				// remove divs
+				outer.parentNode.removeChild(outer);
+
+				return widthNoScroll - widthWithScroll;
+			}
 			var win = angular.element($window);
 			$rootScope.$watch('windowSize.width', function(newVal){
 				if(newVal > 767){
 					scope.num = 128;
-					angular.element(element).css('width', newVal - scope.num - 15);
+					angular.element(element).css('width', newVal - scope.num - getScrollbarWidth());
 				}
 				else{
 					scope.num = 0;
@@ -21,7 +45,7 @@ angular.module('Directives', [])
 			win.bind('resize', function(){
 				$rootScope.$apply(function(){
 						//15px to balance the difference in the beginning (due to scrollbar)
-						$rootScope.windowSize.width = win.width()+15;
+						$rootScope.windowSize.width = win.width() + getScrollbarWidth();
 						$rootScope.windowSize.height = win.height();
 					});
 			});
@@ -120,6 +144,39 @@ angular.module('Directives', [])
 				});
 			});
 
+		}
+	};
+}])
+.directive('ngAboutAnimate', [ '$document','$interval', function($document, $interval) {
+	return {
+		restrict: 'A',
+		scope: {
+			steps: '&steps',
+			section: '&section'
+		},
+		link: function (scope,element) {
+			var steps = scope.steps();
+			var _i = 0;
+			var interval;
+			var v = 2500;
+			function addElements(){
+				if(_i < steps.length){
+					console.log(steps[_i]);
+					if(steps[_i].clear === false){
+						angular.element(element).append(steps[_i].content);
+					}
+					else{
+						angular.element(element).empty();
+						angular.element(element).append(steps[_i].content);
+					}
+					$interval.cancel(interval);
+					v = steps[_i].interval;
+					interval = $interval(addElements, v);
+					_i++;
+
+				}
+			}
+			interval = $interval(addElements, v);
 		}
 	};
 }]);

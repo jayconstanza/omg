@@ -62,9 +62,26 @@ $bg-stripe-white: "/images/patterns/pattern_white_stripes_256x256.jpg";
 /*===============================
 =            CLASSES            =
 ===============================*/
+/*==========  POSITION  ==========*/
+
+.button-wrapper{
+	@extend .text-center;
+}
 
 /*==========  TYPO  ==========*/
 
+.typewriter
+{
+    @include prefixer(animation, (type 2.5s steps(50, end)), webkit moz o spec ms);
+	// border-right: 1px solid #000;
+	// height: 100%;
+	overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    // word-wrap: break-word;
+    // -webkit-animation: type 2.5s steps(50, end);
+    // animation: type 2.5s steps(50, end);
+}
 .fancy{
 	@include change-font-set('archi', $darkRed, $h3);
 }
@@ -95,6 +112,14 @@ $bg-stripe-white: "/images/patterns/pattern_white_stripes_256x256.jpg";
 	to {
 		transform: scale(1);
 	}
+}
+
+@keyframes type{
+    from { width: 0; }
+}
+
+@-webkit-keyframes type{
+    from { width: 0; }
 }
 /*-----  End of ANIMATIONS  ------*/
 

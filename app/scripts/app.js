@@ -11,7 +11,8 @@ angular.module('codeApp', [
 	'HomeModule',
 	'VideosModule',
 	'FotosModule',
-	'SocialModule'
+	'SocialModule',
+	'AboutMeModule'
 ])
 .config([ '$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 	$routeProvider
@@ -31,6 +32,10 @@ angular.module('codeApp', [
 		templateUrl: '/views/partials/social.html',
 		controller: 'SocialCtrl'
 	})
+	.when('/sobre-mi', {
+		templateUrl: '/views/partials/about_me.html',
+		controller: 'AboutMeCtrl'
+	})
 	.otherwise({
 		redirectTo: '/'
 	});
@@ -43,7 +48,8 @@ angular.module('codeApp', [
 		{ name: 'LIKES', href:'', img:'images/icons/nav/likes.png', click: true, id:'menu-icon-likes' },
 		{ name: 'Fotos', href:'/fotos', img:'/images/icons/nav/fotos.png', id:'menu-icon-fotos' },
 		{ name: 'Sobre mí', href:'/sobre-mi', img:'/images/icons/nav/sobre-mi.png', id:'menu-icon-sobre' },
-		{ name: 'Social', href:'/social', img:'/images/icons/nav/social.png', id:'menu-icon-social' }
+		{ name: 'Social', href:'/social', img:'/images/icons/nav/social.png', id:'menu-icon-social' },
+		{ name: 'Comparte', href:'', img:'/images/icons/nav/comparte.png', click: true, id:'menu-icon-comparte' }
 	];
 	$rootScope.windowSize = {
 		width: angular.element($window).width(),
@@ -55,4 +61,5 @@ angular.module('codeApp', [
 		{ klass: 'icon-gplus', url: 'https://plus.google.com/share?url='+document.URL },
 	];
 	$rootScope.likes = false;
+	$rootScope.comparte = false;
 }]);
