@@ -4,6 +4,7 @@ angular.module('codeApp', [
 	'ngResource',
 	'ngRoute',
 	'ngAnimate',
+	'ngTouch',
 	'angular-blocks',
 	'Filters',
 	'Directives',
