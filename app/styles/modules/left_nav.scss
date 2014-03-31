@@ -70,7 +70,7 @@
 			@include min-size(128px 24px);
 			@include position(relative);
 			@include size(128px 24px);
-			background: url($bg-stripe-black) repeat;
+			background: none;
 			bottom: 28px;
 			color: $lightGrey;
 			left: 0;

@@ -80,7 +80,8 @@ a{
 }
 body{
 	@include change-font-set('open', $grey, $font-base, 300);
-	background: url($bg-stripe-white) repeat transparent;
+	// background: url($bg-stripe-white) repeat transparent;
+	background: #fff;
 }
 body > .container-fluid{
 	@include position(relative);
