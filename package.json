@@ -2,7 +2,9 @@
   "name": "code",
   "version": "0.0.0",
   "dependencies": {
-    "connect-modrewrite": "~0.6.4-pre"
+    "connect-modrewrite": "~0.6.4-pre",
+    "gzippo": "~0.2.0",
+    "express": "~3.5.1"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
