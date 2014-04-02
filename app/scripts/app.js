@@ -61,6 +61,9 @@ angular.module('codeApp', [
 		{ klass: 'icon-tw', url: 'http://twitter.com/home?status=¡Hey!%20Echa%20un%20vistazo%20a%20los%20videos%20de%20OMartinGual+'+document.URL },
 		{ klass: 'icon-gplus', url: 'https://plus.google.com/share?url='+document.URL },
 	];
+	$rootScope.log = function(variable) {
+		console.log(variable);
+	};
 	$rootScope.likes = false;
 	$rootScope.comparte = false;
 }]);

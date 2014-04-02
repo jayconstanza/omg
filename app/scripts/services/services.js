@@ -1,9 +1,11 @@
 'use strict';
 
 angular.module('Services', [])
-.factory('YoutubeService', [ '$http', function($http) {
+.factory('YoutubeService', [ '$http', '$q', function($http, $q) {
 	return {
 		getVideoList: function() {
+			var deferred = $q.defer();
+
 			var url = 'https://www.googleapis.com/youtube/v3/playlistItems?playlistId=UUtL3CrHPV6qHBaK1IUBoBIg&key=AIzaSyD-OH-663ZPQs9jWyi8rYWdXzK3P4Xtn9U&callback=JSON_CALLBACK&part=snippet&fields=items(snippet(description,thumbnails,title,resourceId))';
 			var videoList = [];
 			$http.jsonp(url)
@@ -12,14 +14,17 @@ angular.module('Services', [])
 				angular.forEach(data.items, function(item){
 					videoList.push(item);
 				});
+				deferred.resolve(videoList);
 			})
 			.error(function(err){
-				throw new Error(err);
+				deferred.reject(new Error(err));
 			});
-			return videoList;
+			return deferred.promise;
 		},
 
 		getVideoStatistics: function(id){
+			var deferred = $q.defer();
+
 			var statisticsURL = 'https://www.googleapis.com/youtube/v3/videos?id='+id+'&key=AIzaSyD-OH-663ZPQs9jWyi8rYWdXzK3P4Xtn9U&callback=JSON_CALLBACK&part=statistics,contentDetails,snippet&fields=items(statistics, contentDetails(duration),snippet(categoryId))';
 			var statistics = [];
 			$http.jsonp(statisticsURL)
@@ -28,27 +33,33 @@ angular.module('Services', [])
 				angular.forEach(data.items, function(item){
 					statistics.push(item);
 				});
+				deferred.resolve(statistics);
 			})
 			.error(function(err){
-				throw new Error(err);
+				deferred.reject(new Error(err));
 			});
 
-			return statistics;
+			return deferred.promise;
 		},
 		getVideoCategory: function(id){
-			var categoryURL = 'https://www.googleapis.com/youtube/v3/videoCategories?part=snippet&id='+id+'&key=AIzaSyD-OH-663ZPQs9jWyi8rYWdXzK3P4Xtn9U&callback=JSON_CALLBACK';
-			var category = '';
+			var deferred = $q.defer();
+			
+			var categoryURL = 'https://www.googleapis.com/youtube/v3/videoCategories?part=snippet&id='+id+'&key=AIzaSyD-OH-663ZPQs9jWyi8rYWdXzK3P4Xtn9U&callback=JSON_CALLBACK&hl=es_ES';
+			var category = [];
 			$http.jsonp(categoryURL)
 			.success(function(data){
 				console.log(data);
 				angular.forEach(data.items, function(item){
-					category = item.items[0].snippet.title;
+					// console.log(item.snippet.title);
+					category.push(item.snippet.title);
+					console.log(category);
 				});
+				deferred.resolve(category);
 			})
 			.error(function(err){
-				throw new Error(err);
+				deferred.reject(new Error(err));
 			});
-			return category;
+			return deferred.promise;
 		}
 	};
 }]);
