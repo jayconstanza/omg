@@ -21,7 +21,7 @@
 	<div data-block-append="center_panel-description">
 		<article>
 			<p class="description">
-				{{ videoDesc }} - {{ videoCat[0] }}
+				{{ videoDesc }} <br><br> Categoría: <b>{{ videoCat[0] }}</b>
 			</p>
 		</article>
 		<article class="statistics">
@@ -50,7 +50,7 @@
 		<h1 class="video-title" ng-click="list = !list">{{ videoTitle }}<br><span class="glyphicon glyphicon-chevron-down" ng-show="!list"></span><span class="glyphicon glyphicon-chevron-up" ng-show="list"></span></h1>
 		<nav class="center-block" id="center_panel-video_selector" ng-show="list">
 			<ul class="list-unstyled" ng-click="list = false">
-				<li ng-repeat="v in videoList" ng-click="videoChange(v.snippet.title, v.snippet.resourceId.videoId, v.snippet.description, videoStatistics[0].snippet.categoryId);" class="video-title" ng-mouseenter="play = !play" ng-mouseleave="play = !play">
+				<li ng-repeat="v in videoList" ng-click="videoChange(v.snippet.title, v.snippet.resourceId.videoId, v.snippet.description);" class="video-title" ng-mouseenter="play = !play" ng-mouseleave="play = !play">
 					<img class="thumbnail" src="{{ v.snippet.thumbnails.default.url }}" alt="{{ v.snippet.title }}">
 					<p>{{ v.snippet.title }}</p>&nbsp;<span class="glyphicon glyphicon-play" ng-show="play"></span>
 				</li>

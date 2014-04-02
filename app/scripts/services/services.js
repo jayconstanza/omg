@@ -10,7 +10,7 @@ angular.module('Services', [])
 			var videoList = [];
 			$http.jsonp(url)
 			.success(function(data){
-				console.log(data);
+				// console.log(data);
 				angular.forEach(data.items, function(item){
 					videoList.push(item);
 				});
@@ -29,7 +29,7 @@ angular.module('Services', [])
 			var statistics = [];
 			$http.jsonp(statisticsURL)
 			.success(function(data){
-				console.log(data);
+				// console.log(data);
 				angular.forEach(data.items, function(item){
 					statistics.push(item);
 				});
@@ -48,7 +48,7 @@ angular.module('Services', [])
 			var category = [];
 			$http.jsonp(categoryURL)
 			.success(function(data){
-				console.log(data);
+				// console.log(data);
 				angular.forEach(data.items, function(item){
 					// console.log(item.snippet.title);
 					category.push(item.snippet.title);
