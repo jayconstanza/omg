@@ -35,20 +35,28 @@
 				background-image: url(../../images/oriol.jpg);
 				background-repeat: none;
 				#email{
-					// @extend .center-block;
-					// @extend .circle;
 					@include change-font-set('open', $lightGrey, 4rem, 300);
 					@include display(block);
 					@include position(relative);
-					@include prefixer(animation, (fadeIn 1s), webkit moz ms o spec);
+					@include prefixer(animation, (fadeOut 1s), webkit moz ms o spec);
 					@include size(192px);
-					// animation-delay: 0.5s;
-					// top: 32px;
 					background: url($bg-stripe-red) repeat;
 					border-radius: 50%;
 					cursor: pointer;
 					line-height: 192px;
 					margin: -25px 0 0 -25px;
+					&.ng-hide{
+						@include prefixer(animation, (fadeIn 1s), webkit moz ms o spec);
+					}
+					&.ng-hide-add{
+						@include prefixer(animation, (fadeOut 1s), webkit moz ms o spec);
+					}
+					&.ng-hide-remove{
+						@include prefixer(animation, (fadeIn 1s), webkit moz ms o spec);
+					}
+					&.ng-hide-add, &.ng-hide-remove{
+						@include display(block !important);
+					}
 				}
 			}
 			.saludo{
@@ -80,8 +88,17 @@
 			nav{
 				ul{
 					li{
+						@include position(relative);
+						@include prefixer(transition, left 0.60s, webkit moz ms o spec);
+						left: 0;
+						margin: 0px auto;
+						padding: 0.5rem 0px;
+						text-align: left;
+						width: 320px;
 						&:hover{
-							border-bottom: 2px solid $darkRed;
+							border-bottom: 2px solid $lightGrey;
+							cursor: pointer;
+							left: 1rem;
 						}
 					}
 				}
