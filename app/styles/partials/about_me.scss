@@ -38,7 +38,7 @@
 					@include change-font-set('open', $lightGrey, 4rem, 300);
 					@include display(block);
 					@include position(relative);
-					@include prefixer(animation, (fadeOut 1s), webkit moz ms o spec);
+					@include prefixer(animation, (fadeIn 1s), webkit moz ms o spec);
 					@include size(192px);
 					background: url($bg-stripe-red) repeat;
 					border-radius: 50%;
@@ -46,13 +46,13 @@
 					line-height: 192px;
 					margin: -25px 0 0 -25px;
 					&.ng-hide{
-						@include prefixer(animation, (fadeIn 1s), webkit moz ms o spec);
-					}
-					&.ng-hide-add{
 						@include prefixer(animation, (fadeOut 1s), webkit moz ms o spec);
 					}
+					&.ng-hide-add{
+						// @include prefixer(animation, (fadeOut 1s), webkit moz ms o spec);
+					}
 					&.ng-hide-remove{
-						@include prefixer(animation, (fadeIn 1s), webkit moz ms o spec);
+						// @include prefixer(animation, (fadeIn 1s), webkit moz ms o spec);
 					}
 					&.ng-hide-add, &.ng-hide-remove{
 						@include display(block !important);
@@ -80,6 +80,9 @@
 				margin: 0 auto;
 				img{
 					@include size(64px);
+					&:hover{
+						@include prefixer(animation, wobble 1.7s, webkit moz ms o spec);
+					}
 				}
 			}
 			h3{

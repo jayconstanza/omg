@@ -147,8 +147,9 @@ angular.module('Directives', [])
 		}
 	};
 }])
-.directive('ngAboutAnimate', [ '$document','$interval', function($document, $interval) {
+.directive('ngAboutAnimate', [ '$document','$interval','$compile', function($document, $interval, $compile) {
 	return {
+		controller: 'AboutMeCtrl',
 		restrict: 'A',
 		scope: {
 			steps: '&steps',
@@ -159,15 +160,16 @@ angular.module('Directives', [])
 			var _i = 0;
 			var interval;
 			var v = 2500;
-			function addElements(){
+			var adding = function addElements(){
 				if(_i < steps.length){
 					console.log(steps[_i]);
+					var elem = $compile(steps[_i].content)(scope);
 					if(steps[_i].clear === false){
-						angular.element(element).append(steps[_i].content);
+						element.append(elem);
 					}
 					else{
 						angular.element(element).empty();
-						angular.element(element).append(steps[_i].content);
+						element.append(elem);
 					}
 					$interval.cancel(interval);
 					v = steps[_i].interval;
@@ -175,8 +177,8 @@ angular.module('Directives', [])
 					_i++;
 
 				}
-			}
-			interval = $interval(addElements, v);
+			};
+			interval = $interval(adding, v);
 		}
 	};
 }]);

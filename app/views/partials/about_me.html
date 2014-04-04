@@ -1,18 +1,31 @@
 <div data-extend-template="/layout.html" >
 	<div data-block-append="center_panel-header" >
-		<figure class="circle logo" ng-mouseover="email = !email" ng-mouseout="email = !email"><div id="email" ng-show="email"><span class="glyphicon glyphicon-envelope"></span></div></figure>
+		<figure class="circle logo" ng-mouseover="email = !email" ng-mouseout="email = !email">
+			<div id="email" ng-show="email">
+				<span class="glyphicon glyphicon-envelope"></span>
+			</div>
+		</figure>
 	</div>
 	<div data-block-append="center_panel-header" class="block-center" section="section" steps="stepsHeader" ng-about-animate>
 		<p class="saludo">
-			¡HOLA!
+			{{ saludo }}
 		</p>
 	</div>
-	<article data-block-append='center_panel-brackets_container' class="block-fifty" section="section" steps="stepsThird" ng-about-animate>
+	<article data-block-prepend="center_panel-brackets_container">
+		<h2 ng-show="historia">La historia de OMartinGual</h2>
+		<p ng-show="historia">Esta es mi historia</p>
+		<h2 ng-show="clientes">Los clientes de OMartinGual</h2>
+		<p ng-show="clientes">Estos son mis clientes</p>
+		<h2 ng-show="trabajos">Los trabajos de OMartinGual</h2>
+		<p ng-show="trabajos">Estos son mis trabajos</p>
+	
+	<section data-block-append='center_panel-brackets_container' class="block-fifty" section="section" steps="stepsThird" ng-about-animate>
 		
-	</article>
+	</section>
 	<aside data-block-append='center_panel-brackets_container' class="block-fifty">
 		<nav data-block-append='center_panel-brackets_container'>
 			<ul class="list-unstyled" section="section" steps="stepsFourth" ng-about-animate></ul>
 		</nav>
 	</aside>
+	</article>
 </div>
