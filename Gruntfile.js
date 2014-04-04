@@ -366,10 +366,10 @@ module.exports = function (grunt) {
 		uncss: {
       dist: {
         files: {
-          'styles/tiny.css': ['dist/index.html']
+          'dist/styles/main.css': ['dist/index.html']
         },
         options: {
-          stylesheets: ['../.tmp/styles/main.css']
+          stylesheets: ['styles/main.css']
         }
       }
 		},
