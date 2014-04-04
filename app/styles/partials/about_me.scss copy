@@ -1,0 +1,103 @@
+/**
+*
+* SCSS FILE FOR THE PARTIAL: app/styles/partials/about_me.scss
+* @author Derrick Roccka
+**/
+@import 'sass-bootstrap/lib/bootstrap';
+@import 'bourbon/app/assets/stylesheets/_bourbon';
+@import '../styles/helpers/mixins';
+//important to add the class related to each section
+#ajax_container{
+	#center_panel.OMartinGual{
+		header{
+			@extend .center-block;
+			@include size(640px 64px);
+			margin-top: 10px;
+			h1{
+				// @extend .typewriter;
+				@include change-font-set('Courier', $grey, $h2, normal);
+				margin: 0 auto;
+				&.threeD{
+					@include font-size($h1);
+				}	
+			}
+		}
+		#center_panel-brackets_container{
+			@extend .center-block;
+			@include size(640px 360px);
+			background: none !important;
+			margin-bottom: 1rem;
+			.circle{
+				@include prefixer(animation, flip 1s, webkit moz ms o spec);
+				@include position(relative);
+				@include size(320px);
+				background-size: cover;
+				border: 10px solid white;
+				border-radius: 50%;
+				margin: 0 auto;
+			}
+			.company{
+				@extend .text-center;
+				@include display(inline-block);
+				@include size(192px);
+				figcaption{
+					@include change-font-set('open', $grey, $h3, 300);
+				}
+				span{
+					@include display(block);
+					@include size(96px);
+					background-image: url(../../images/sprites/company.png);
+					background-repeat: no-repeat;
+					background-size: 288px 96px;
+					margin: 0 auto;
+				}
+			}
+			.logo{
+				background: url($bg-stripe-red) repeat;
+				img{
+					@extend .center-block;
+					@include position(relative);
+					@include prefixer(animation, (fade 1s, lightSpeedIn 1s), webkit moz ms o spec);
+					animation-delay: 0.5s;
+					top: 32px;
+					width: 192px;
+				}
+			}
+			.nieste{
+				background: url('../../images/oriol.jpg') no-repeat center;
+			}
+			.nosoy{
+				background: url('../../images/bob.jpg') no-repeat center;
+			}
+			.tampoco{
+				background: url('../../images/niro.jpg') no-repeat center;
+			}
+			.smile{
+				@include font-size(4rem);
+				@include prefixer (animation, 1s rotate-ninety 1s, webkit moz ms o spec);
+			}
+			#tv3 span{
+				@include prefixer(animation, fadeIn 3s, webkit moz ms o spec);
+				background-position: 0 0;
+			}
+			#treceav span{
+				@include prefixer(animation, fadeIn 1s, webkit moz ms o spec);
+				background-position: -96px 0;
+			}
+			#impact span{
+				@include prefixer(animation, fadeIn 1s, webkit moz ms o spec);
+				background-position: -192px 0;
+			}
+			h1, h2, h3{
+				@extend .center-block;
+			}
+		}
+		#center_panel-description{
+			@include display(none);
+			background: none !important;
+		}
+		footer{
+
+		}
+	}
+}
