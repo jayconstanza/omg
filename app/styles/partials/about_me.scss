@@ -74,6 +74,10 @@
 			@extend .center-block;
 			@include size(100% auto);
 			background: none !important;
+			#about_me-chapters{
+				margin: 0 auto;
+				max-width: 768px;
+			}
 			.arrow{
 				@include prefixer(animation, wobble 1.7s, webkit moz ms o spec);
 				@include size(64px);

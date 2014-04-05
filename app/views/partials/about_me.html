@@ -11,21 +11,24 @@
 			{{ saludo }}
 		</p>
 	</div>
-	<article data-block-prepend="center_panel-brackets_container">
-		<h2 ng-show="historia">La historia de OMartinGual</h2>
-		<p ng-show="historia">Esta es mi historia</p>
-		<h2 ng-show="clientes">Los clientes de OMartinGual</h2>
-		<p ng-show="clientes">Estos son mis clientes</p>
-		<h2 ng-show="trabajos">Los trabajos de OMartinGual</h2>
-		<p ng-show="trabajos">Estos son mis trabajos</p>
-	
-	<section data-block-append='center_panel-brackets_container' class="block-fifty" section="section" steps="stepsThird" ng-about-animate>
+	<article data-block-prepend="center_panel-brackets_container" id="about_me-chapters">
+		<h2 ng-show="chapters.historia">La historia de OMartinGual<button type="button" class="close" aria-hidden="false" ng-click="setChapters(false, false, false)">&times;</button>
+		</h2>
+		<p ng-show="chapters.historia">Esta es mi historia</p>
+		<h2 ng-show="chapters.clientes">Los clientes de OMartinGual<button type="button" class="close" aria-hidden="false" ng-click="setChapters(false, false, false)">&times;</button>
+		</h2>
+		<p ng-show="chapters.clientes">Estos son mis clientes</p>
+		<h2 ng-show="chapters.trabajos">Los trabajos de OMartinGual<button type="button" class="close" aria-hidden="false" ng-click="setChapters(false, false, false)">&times;</button>
+		</h2>
+		<p ng-show="chapters.trabajos">Estos son mis trabajos</p>
+	</article>
+	<article data-block-append='center_panel-brackets_container' class="block-fifty" section="section" steps="stepsThird" ng-about-animate>
 		
-	</section>
+	</article>
 	<aside data-block-append='center_panel-brackets_container' class="block-fifty">
 		<nav data-block-append='center_panel-brackets_container'>
-			<ul class="list-unstyled" section="section" steps="stepsFourth" ng-about-animate></ul>
+			<ul class="list-unstyled" section="section" steps="stepsFourth" chapters="chapters" setChapters="setChapters" ng-about-animate>
+			</ul>
 		</nav>
 	</aside>
-	</article>
 </div>

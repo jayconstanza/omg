@@ -4,9 +4,11 @@ angular.module('AboutMeModule', [])
 .controller('AboutMeCtrl', [ '$scope', function ($scope) {
 	$scope.section = 'OMartinGual';
 	$scope.saludo = '¡HOLA!';
-	$scope.historia = false;
-	$scope.clientes = false;
-	$scope.trabajos = false;
+	$scope.chapters = {
+		historia: false,
+		clientes: false,
+		trabajos: false
+	};
 
 	$scope.stepsHeader = [
 		{ content: '<h1>Soy Oriol Martín Gual</h1>', clear: true, interval: 1000 },
@@ -19,19 +21,16 @@ angular.module('AboutMeModule', [])
 	];
 	$scope.stepsFourth = [
 		{ content: '', clear: false, interval: 4000 },
-		{ content: '<li class="fadeIn" ng-click="abc()" >1. Mi historia</li>', clear: false, interval: 1000 },
-		{ content: '<li class="fadeIn" ng-click="setOptionStatus(false,true,false)">2. ¿Para quién he trabajado?</li>', clear: false, interval: 1000 },
-		{ content: '<li class="fadeIn" ng-click="setOptionStatus(false,false,true)">3. ¿Qué he hecho?</li>', clear: false, interval: 1000 },
+		{ content: '<li class="fadeIn" ng-click="setChapters(true, false, false)" >1. Mi historia</li>', clear: false, interval: 1000 },
+		{ content: '<li class="fadeIn" ng-click="setChapters(false, true, false)">2. ¿Para quién he trabajado?</li>', clear: false, interval: 1000 },
+		{ content: '<li class="fadeIn" ng-click="setChapters(false, false, true)">3. ¿Qué he hecho?</li>', clear: false, interval: 1000 },
 		// { content: '<p><small>O si te apetece... envíame un mensaje :)</small></p>', clear: false, interval: 1500 },
 		// { content: '<p><span class="glyphicon glyphicon-envelope"></span></p>', clear: false, interval: 500 },
 	];
-	$scope.setOptionStatus = function(historia, clientes, trabajos){
-		console.log('hei', clientes);
-		$scope.historia = historia;
-		$scope.clientes = clientes;
-		$scope.trabajos = trabajos;
-	};
-	$scope.abc = function(){
-		window.alert('hahaha');
+
+	$scope.setChapters = function(historia, clientes, trabajos){
+		$scope.chapters.historia = historia;
+		$scope.chapters.clientes = clientes;
+		$scope.chapters.trabajos = trabajos;
 	};
 }]);

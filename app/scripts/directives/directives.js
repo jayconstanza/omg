@@ -153,7 +153,9 @@ angular.module('Directives', [])
 		restrict: 'A',
 		scope: {
 			steps: '&steps',
-			section: '&section'
+			section: '&section',
+			chapters: '=chapters',
+			setChapters: '&setChapters'
 		},
 		link: function (scope,element) {
 			var steps = scope.steps();
