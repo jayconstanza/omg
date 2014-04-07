@@ -42,7 +42,7 @@ angular.module('codeApp', [
 	});
 	$locationProvider.html5Mode(true);
 }])
-.run(['$rootScope', '$window', function($rootScope, $window){
+.run(['$rootScope', '$window', '$anchorScroll', '$location', function($rootScope, $window, $anchorScroll, $location){
 	$rootScope.menuItems = [
 		{ name: 'Home', href:'/home', img:'/images/icons/nav/logo.png', id:'menu-icon-logo' },
 		{ name: 'Videos', href:'/videos', img:'/images/icons/nav/videos.png', id:'menu-icon-videos' },
@@ -61,9 +61,16 @@ angular.module('codeApp', [
 		{ klass: 'icon-tw', url: 'http://twitter.com/home?status=¡Hey!%20Echa%20un%20vistazo%20a%20los%20videos%20de%20OMartinGual+'+document.URL },
 		{ klass: 'icon-gplus', url: 'https://plus.google.com/share?url='+document.URL },
 	];
+	$rootScope.likes = false;
+	$rootScope.comparte = false;
 	$rootScope.log = function(variable) {
 		console.log(variable);
 	};
-	$rootScope.likes = false;
-	$rootScope.comparte = false;
+	$rootScope.scrollTo = function(id){
+		var old = $location.hash();
+		$location.hash(id);
+		$anchorScroll();
+		$location.hash(old);
+	};
+
 }]);
