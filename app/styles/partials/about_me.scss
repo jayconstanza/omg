@@ -14,7 +14,7 @@
 	}
 	.block-fifty{
 		@extend .pull-left;
-		@include min-size(320px);
+		@include min-size(320px 192px);
 		@include prefixer(transition, all 1s, webkit moz ms o spec);
 		margin: 1rem 0 0 0;
 	}
@@ -59,7 +59,7 @@
 					}
 				}
 			}
-			.saludo{
+			.greeting{
 				@include font-size(8rem);
 				vertical-align: middle;
 			}
@@ -77,6 +77,11 @@
 			#about_me-chapters{
 				margin: 0 auto;
 				max-width: 768px;
+				padding: 0 0.5rem;
+				text-align: justify;
+				h1, h2, h3{
+					text-align: center;
+				}
 			}
 			.arrow{
 				@include prefixer(animation, wobble 1.7s, webkit moz ms o spec);
@@ -116,7 +121,57 @@
 			background: none !important;
 		}
 		footer{
-
+			
 		}
 	}
 }
+
+/*=====================================
+=            MEDIA QUERIES            =
+=====================================*/
+
+@media only screen and (max-width: 768px){
+	#ajax_container.OMartinGual{
+		.block-fifty{
+			@include min-size(160px 24px);
+			@include size(100% auto);
+		}
+		#center_panel.OMartinGual{
+			header{
+				.greeting{
+					@include font-size(3rem !important);
+				}
+				h1{
+					@include font-size(2rem !important);
+				}
+			}
+			#center_panel-brackets_container{
+				.arrow{
+					// @include prefixer(transform, rotate(90deg), webkit moz ms o spec);
+					@include size(32px);
+					img{
+						@include prefixer(transform, rotate(90deg), webkit moz ms o spec);
+						@include size(32px);
+						&:hover{
+							@include prefixer(transform, rotate(90deg), webkit moz ms o spec);
+							@include prefixer(animation, none, webkit moz ms o spec);
+						}
+					}
+				}
+				nav{
+					ul{
+						li{
+							text-align: center;
+							&:hover{
+								left: 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/*-----  End of MEDIA QUERIES  ------*/
+

@@ -155,7 +155,9 @@ angular.module('Directives', [])
 			steps: '&steps',
 			section: '&section',
 			chapters: '=chapters',
-			setChapters: '&setChapters'
+			stepsvisibility: '=stepsvisibility',
+			setChapters: '&setChapters',
+			showSteps: '&showSteps'
 		},
 		link: function (scope,element) {
 			var steps = scope.steps();
@@ -181,28 +183,6 @@ angular.module('Directives', [])
 				}
 			};
 			interval = $interval(adding, v);
-		}
-	};
-}])
-.directive('ngSmoothScroll', [ function() {
-	return {
-		restrict: 'A',
-		scope: true,
-		link: function () {
-			// var idToScroll = element.attr('go-to');
-			// console.log(idToScroll);
-			// element.on('click', function() {
-			// 	var target;
-			// 	if (idToScroll) {
-			// 		target = angular.element(idToScroll);
-			// 	} else {
-			// 		target = element;
-			// 	}
-			// 	angular.element('body').animate({
-			// 		scrollTop: target.offset().top
-			// 	}, 'slow');
-			// });
-
 		}
 	};
 }]);

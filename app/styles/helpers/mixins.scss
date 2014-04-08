@@ -70,7 +70,7 @@ $bg-stripe-white: "/images/patterns/pattern_white_stripes_256x256.jpg";
 /*==========  BLOCKS  ==========*/
 
 .block-fifty{
-	@include display(inline-block !important);
+	@include display(inline-block);
 	@include size(50% auto);
 }
 
