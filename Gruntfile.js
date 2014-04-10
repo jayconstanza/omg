@@ -171,7 +171,7 @@ module.exports = function (grunt) {
 				imagesDir: '<%= yeoman.app %>/images',
 				javascriptsDir: '<%= yeoman.app %>/scripts',
 				fontsDir: '<%= yeoman.app %>/styles/fonts',
-				importPath: '<%= yeoman.app %>/bower_components',
+				importPath: ['<%= yeoman.app %>/bower_components', '<%= yeoman.app %>/styles'],
 				httpImagesPath: '/images',
 				httpGeneratedImagesPath: '/images/generated',
 				httpFontsPath: '/styles/fonts',
@@ -181,7 +181,8 @@ module.exports = function (grunt) {
 			},
 			dist: {
 				options: {
-					generatedImagesDir: '<%= yeoman.dist %>/images/generated'
+					generatedImagesDir: '<%= yeoman.dist %>/images/generated',
+					// specify: '<%= yeoman.app %>/styles/main.scss'
 				}
 			},
 			server: {
@@ -364,16 +365,12 @@ module.exports = function (grunt) {
 		},
 
 		uncss: {
-      dist: {
-        files: {
-          'dist/styles/main.css': ['dist/index.html']
-        },
-        options: {
-          stylesheets: ['styles/main.css']
-        }
-      }
+			dist: {
+				files : {
+					'<%= yeoman.dist %>/styles/xxxz.css': ['<%= yeoman.dist %>/index.html']
+				}
+			}
 		},
-
 	});
 
 
@@ -420,7 +417,6 @@ module.exports = function (grunt) {
 		'rev',
 		'usemin',
 		'htmlmin',
-		// 'uncss'
 	]);
 		
 	grunt.registerTask('default', [
@@ -429,7 +425,7 @@ module.exports = function (grunt) {
 		'build'
 	]);
 	grunt.registerTask('guncss', [
-		// 'build',
+		'build',
 		'uncss'
 	]);
 };

@@ -55,15 +55,15 @@ $icon-font-path: "/bower_components/sass-bootstrap/fonts/";
 // Tha main path is in app/bower_components/
 @import 'sass-bootstrap/lib/bootstrap';
 @import 'bourbon/app/assets/stylesheets/_bourbon';
-@import '../styles/helpers/mixins';
-@import '../styles/modules/left_nav';
-@import '../styles/modules/right_nav';
-@import '../styles/modules/footer';
-@import '../styles/partials/home';
-@import '../styles/partials/video';
-@import '../styles/partials/fotos';
-@import '../styles/partials/about_me';
-@import '../styles/partials/social';
+@import '../styles/helpers/_mixins';
+@import '../styles/modules/_left_nav';
+@import '../styles/modules/_right_nav';
+@import '../styles/modules/_footer';
+@import '../styles/partials/_home';
+@import '../styles/partials/_video';
+@import '../styles/partials/_fotos';
+@import '../styles/partials/_about_me';
+@import '../styles/partials/_social';
 
 /*-----  End of IMPORTS  ------*/
 
