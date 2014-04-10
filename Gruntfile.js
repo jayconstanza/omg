@@ -182,7 +182,7 @@ module.exports = function (grunt) {
 			dist: {
 				options: {
 					generatedImagesDir: '<%= yeoman.dist %>/images/generated',
-					// specify: '<%= yeoman.app %>/styles/main.scss'
+					specify: '<%= yeoman.app %>/styles/main.scss'
 				}
 			},
 			server: {

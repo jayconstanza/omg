@@ -3,9 +3,9 @@
 * SCSS FILE FOR THE PARTIAL: app/styles/partials/about_me.scss
 * @author Derrick Roccka
 **/
-@import 'sass-bootstrap/lib/bootstrap';
-@import 'bourbon/app/assets/stylesheets/_bourbon';
-@import '../styles/helpers/mixins';
+// @import 'sass-bootstrap/lib/bootstrap';
+// @import 'bourbon/app/assets/stylesheets/_bourbon';
+// @import '../styles/helpers/mixins';
 //important to add the class related to each section
 #ajax_container.OMartinGual{
 	@include size(100%);
