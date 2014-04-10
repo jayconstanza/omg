@@ -111,7 +111,8 @@
 			@extend .text-left;
 			@include min-size(640px 251px);
 			@include size(640px auto);
-			background: url($bg-stripe-black) repeat;
+			// background: url($bg-stripe-black) repeat;
+			background: $grey;
 			margin-top: 4px;
 			.description{
 				@include change-font-set('open', $lightGrey, 18px, 300);
@@ -122,6 +123,7 @@
 				padding: 36px;
 				.statistic{
 					@include display(inline-block);
+					@include size(32% auto);
 					.duration, .like-count, .view-count {
 						@include display(inline-block);
 						margin: 0 8px 0 0;
@@ -235,6 +237,9 @@
 			footer{
 				@include display(none);
 			}
+		}
+		#lights-switch{
+			@include display(none);
 		}
 	}
 }

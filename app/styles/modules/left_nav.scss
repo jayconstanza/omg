@@ -123,7 +123,7 @@
 		}
 		#menu-icon-comparte{
 			&:hover {
-				@include prefixer(animation, (lightSpeedIn 0.7s), webkit moz ms o spec);
+				// @include prefixer(animation, (lightSpeedIn 0.7s), webkit moz ms o spec);
 				// animation: tada 0.7s;
 			}
 		}
@@ -178,7 +178,7 @@
 		@include size(100% 48px);
 		bottom: 0;
 		left: 0;
-		z-index: 10000;
+		z-index: 10001;
 		ul{
 			@include min-size(100% 48px);
 			@include position(relative);
@@ -245,7 +245,5 @@
 		}
 	}
 }
-
-
 
 /*-----  End of MEDIA QUERIES  ------*/

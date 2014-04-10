@@ -45,7 +45,7 @@ angular.module('codeApp', [
 .run(['$rootScope', '$window', '$anchorScroll', '$location', function($rootScope, $window, $anchorScroll, $location){
 	$rootScope.menuItems = [
 		{ name: 'Home', href:'/home', img:'/images/icons/nav/logo.png', id:'menu-icon-logo' },
-		{ name: 'Videos', href:'/videos', img:'/images/icons/nav/videos.png', id:'menu-icon-videos' },
+		{ name: 'Bobina', href:'/videos', img:'/images/icons/nav/videos.png', id:'menu-icon-videos' },
 		{ name: 'LIKES', href:'', img:'images/icons/nav/likes.png', click: true, id:'menu-icon-likes' },
 		{ name: 'Fotos', href:'/fotos', img:'/images/icons/nav/fotos.png', id:'menu-icon-fotos' },
 		{ name: 'Sobre mí', href:'/sobre-mi', img:'/images/icons/nav/sobre-mi.png', id:'menu-icon-sobre' },
