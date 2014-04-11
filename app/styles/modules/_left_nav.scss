@@ -251,7 +251,7 @@
 	}
 }
 /*==========  ONLY FOR ENABLING INDEPENDENT SCROLLING  ==========*/
-@media only screen and (max-height: 896px){
+@media only screen and (max-height: 896px) and (min-width: 768px){
 	#left_nav-wrapper{
 		@include position(fixed);
 		@include size(128px 100%);
