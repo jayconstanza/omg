@@ -136,9 +136,10 @@
 		=            TAGS            =
 		============================*/
 
-		div, a, img{
+		div, a, span{
 			@include size(64px);
 			margin: 0 auto;
+			text-align: center;
 		}
 
 		div{
@@ -215,15 +216,32 @@
 				=            TAGS            =
 				============================*/
 
-				div, a, img{
-					@include size(24px);
-					margin: 0 auto;
+				div, a, span{
+					@include size(32px);
+					// margin: 0 auto;
 				}
 
 				div{
-					margin-top: 12px;
+					margin-top: 8px;
 				}
-				
+				span{
+					&[class*="icon-nav_"]{
+						@include size(32px);
+						background-size: 128px 64px;
+					}
+					&.icon-nav_videos{
+						background-position: -32px 0;
+					}
+					&.icon-nav_about_me{
+						background-position: -96px 0;
+					}
+					&.icon-nav_social{
+						background-position: 0 -32px;
+					}
+					&.icon-nav_fotos{
+						background-position: -32px -32px;
+					}
+				}
 				/*-----  End of TAGS  ------*/
 				
 				/*==================================
@@ -261,10 +279,10 @@
 	}
 	#left_nav{
 		@include size(auto 100%);
-	// height: 100%;
+		// height: 100%;
 		overflow: auto;
-	// width: 100%;
+		// width: 100%;
 		padding-left: 15px;
-}
+	}
 }
 /*-----  End of MEDIA QUERIES  ------*/

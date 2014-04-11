@@ -7,7 +7,7 @@ angular.module('SocialModule', [])
 	$scope.subtitle = 'Encuéntrame en las redes sociales';
 	$scope.redesSociales = [
 		{ name: 'Twitter', icon: 'icon-tw-s', url:'https://twitter.com/omartingual' },
-		{ name: 'LinkedIn', icon: 'icon-fb-s', url:'http://www.linkedin.com/in/oriolmartingual' },
+		{ name: 'LinkedIn', icon: 'icon-linkd-s', url:'http://www.linkedin.com/in/oriolmartingual' },
 		{ name: 'Facebook', icon: 'icon-fb-s', url:'https://www.facebook.com/OMartinGual?fref=ts' },
 	];
 }]);

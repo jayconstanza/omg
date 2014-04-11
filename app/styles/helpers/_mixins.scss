@@ -141,6 +141,34 @@ $bg-stripe-white: "/images/patterns/pattern_white_stripes_256x256.jpg";
 .icon-bubbles-s {
 	background-position: 0 -16px;
 }
+.icon-linkd-s {
+	background-position: -18px -16px;
+}
+[class*="icon-nav_"]{
+	@include display(block);
+	@include size(64px);
+	background-image: url(../images/sprites/sprites-nav_icons.png);
+	background-repeat: no-repeat;
+	background-size: 256px 128px;
+}
+.icon-nav_videos{
+	background-position: -64px 0;
+}
+.icon-nav_likes{
+	background-position: -128px 0;
+}
+.icon-nav_about_me{
+	background-position: -192px 0;
+}
+.icon-nav_social{
+	background-position: 0 -64px;
+}
+.icon-nav_fotos{
+	background-position: -64px -64px;
+}
+.icon-nav_comparte{
+	background-position: -128px -64px;
+}
 /*-----  End of CLASSES  ------*/
 
 /*==================================

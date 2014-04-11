@@ -44,13 +44,13 @@ angular.module('codeApp', [
 }])
 .run(['$rootScope', '$window', '$anchorScroll', '$location', function($rootScope, $window, $anchorScroll, $location){
 	$rootScope.menuItems = [
-		{ name: 'Home', href:'/home', img:'/images/icons/nav/logo.png', id:'menu-icon-logo' },
-		{ name: 'Bobina', href:'/videos', img:'/images/icons/nav/videos.png', id:'menu-icon-videos' },
-		{ name: 'LIKES', href:'', img:'images/icons/nav/likes.png', click: true, id:'menu-icon-likes' },
-		{ name: 'Fotos', href:'/fotos', img:'/images/icons/nav/fotos.png', id:'menu-icon-fotos' },
-		{ name: 'Sobre mí', href:'/sobre-mi', img:'/images/icons/nav/sobre-mi.png', id:'menu-icon-sobre' },
-		{ name: 'Social', href:'/social', img:'/images/icons/nav/social.png', id:'menu-icon-social' },
-		{ name: 'Comparte', href:'', img:'/images/icons/nav/comparte.png', click: true, id:'menu-icon-comparte' }
+		// { name: 'Home', href:'/home', klass:'/images/icons/nav/logo.png', id:'menu-icon-logo' },
+		{ name: 'Bobina', href:'/videos', klass:'icon-nav_videos', id:'menu-icon-videos' },
+		{ name: 'LIKES', href:'', klass:'icon-nav_likes', click: true, id:'menu-icon-likes' },
+		{ name: 'Sobre mí', href:'/sobre-mi', klass:'icon-nav_about_me', id:'menu-icon-sobre' },
+		{ name: 'Social', href:'/social', klass:'icon-nav_social', id:'menu-icon-social' },
+		{ name: 'Fotos', href:'/fotos', klass:'icon-nav_fotos', id:'menu-icon-fotos' },
+		{ name: 'Comparte', href:'', klass:'icon-nav_comparte', click: true, id:'menu-icon-comparte' }
 	];
 	$rootScope.windowSize = {
 		width: angular.element($window).width(),
