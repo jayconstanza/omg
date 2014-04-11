@@ -7,7 +7,7 @@
 // @import 'bourbon/app/assets/stylesheets/_bourbon';
 // @import '../styles/helpers/mixins';
 //important to add the class related to each section
-#ajax_container{
+#ajax_container.social{
 	#center_panel.social{
 		header{
 			@include size(100% auto);
@@ -23,6 +23,16 @@
 				&:hover{
 					@include prefixer(text-shadow, (-0.08em 0px 3px rgba(255, 0, 0, 0.74), 0.08em 0px 0px rgba(0, 238, 238, 0.83)), webkit moz spec o ms);
 
+				}
+			}
+			[class*="icon-"] {
+				@include inline-block;
+				@include size(16px);
+				background-image: url(../images/sprites/sprites.png);
+				background-repeat: no-repeat;
+				background-size: 66.5px 32px;
+				&:hover{
+					// @include prefixer(animation, (pulse 0.7s), webkit moz ms);
 				}
 			}
 		}
@@ -50,7 +60,7 @@
 =====================================*/
 
 @media only screen and (max-width: 480px){
-	#ajax_container{
+	#ajax_container.social{
 		#center_panel.social{
 			header{
 				h1{

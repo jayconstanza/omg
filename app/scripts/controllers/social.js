@@ -6,8 +6,8 @@ angular.module('SocialModule', [])
 	$scope.title = '¡Charla comigo!';
 	$scope.subtitle = 'Encuéntrame en las redes sociales';
 	$scope.redesSociales = [
-		{ name: 'Twitter', logo: '', url:'https://twitter.com/omartingual' },
-		{ name: 'LinkedIn', logo: '', url:'http://www.linkedin.com/in/oriolmartingual' },
-		{ name: 'Facebook', logo: '', url:'https://www.facebook.com/OMartinGual?fref=ts' },
+		{ name: 'Twitter', icon: 'icon-tw-s', url:'https://twitter.com/omartingual' },
+		{ name: 'LinkedIn', icon: 'icon-fb-s', url:'http://www.linkedin.com/in/oriolmartingual' },
+		{ name: 'Facebook', icon: 'icon-fb-s', url:'https://www.facebook.com/OMartinGual?fref=ts' },
 	];
 }]);

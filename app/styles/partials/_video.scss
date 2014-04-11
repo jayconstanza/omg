@@ -124,6 +124,7 @@
 				.statistic{
 					@include display(inline-block);
 					@include size(32% auto);
+					@extend .text-center;
 					.duration, .like-count, .view-count {
 						@include display(inline-block);
 						margin: 0 8px 0 0;

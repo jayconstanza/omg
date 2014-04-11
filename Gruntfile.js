@@ -366,8 +366,11 @@ module.exports = function (grunt) {
 
 		uncss: {
 			dist: {
+				options: {
+					stylesheets: ['styles/main.css']
+				},
 				files : {
-					'<%= yeoman.dist %>/styles/xxxz.css': ['<%= yeoman.dist %>/index.html']
+					'dist/styles/main.css': ['dist/index.html']
 				}
 			}
 		},
@@ -425,7 +428,7 @@ module.exports = function (grunt) {
 		'build'
 	]);
 	grunt.registerTask('guncss', [
-		'build',
+		// 'build',
 		'uncss'
 	]);
 };

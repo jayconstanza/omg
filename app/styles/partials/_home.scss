@@ -54,6 +54,10 @@
 		#center_panel-keywords{
 			// @extend .text-left;
 			@include size(768px auto);
+			h2{
+				@include font-size($font-base + 2px);
+				font-style: italic;
+			}
 		}
 		footer{}
 	}
