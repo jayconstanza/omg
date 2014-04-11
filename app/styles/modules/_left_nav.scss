@@ -3,23 +3,25 @@
 * SCSS FILE FOR THE MODULE: left_nav.scss
 * @author Derrick Roccka
 **/
+
 // @import 'sass-bootstrap/lib/bootstrap';
 // @import 'bourbon/app/assets/stylesheets/_bourbon';
 // @import '../styles/helpers/mixins';
-// #left_nav-wrapper{
-// 	overflow: hidden;
-// 	width: 113px;
-// 	// background: white;
-// 		position: absolute;
-// 	left: 0;
-// 	top:0;
-// }
-// #left_nav{
 
-// 	height: 100%;
-// 	overflow-y: scroll;
-// 	width: 128px;
-// }
+#left_nav-wrapper{
+	@include position(fixed);
+	@include size(128px 100%);
+	left: 0;
+	overflow: hidden;
+	top: 0;
+}
+#left_nav{
+	@include size(auto 100%);
+	// height: 100%;
+	overflow: auto;
+	// width: 100%;
+	padding-left: 15px;
+}
 #left_nav ul{
 	@include size(128px 896px);
 	@include min-size(auto 896px);
