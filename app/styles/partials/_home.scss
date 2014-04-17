@@ -13,7 +13,7 @@
 		height: auto;
 		min-height: 100%;
 		min-width: 100%;
-		opacity: .3;
+		opacity: .6;
 		overflow: hidden;
 		position: absolute;
 		right: 0px;
@@ -37,7 +37,7 @@
 			h1, h2, h3{
 				@include transition (all 1.1s cubic-bezier(0,1.37,.1,.27));
 				@include prefixer(text-shadow, (-0.08em 0px 0px rgba(255, 0, 0, 0.74), 0.08em 0px 0px rgba(0, 238, 238, 0.83)), webkit moz spec o ms);
-				// color: white;
+				color: white;
 
 				&:hover{
 					@include prefixer(text-shadow, (-0.08em 0px 3px rgba(255, 0, 0, 0.74), 0.08em 0px 0px rgba(0, 238, 238, 0.83)), webkit moz spec o ms);
@@ -73,7 +73,11 @@
 			h2{
 				@include font-size($font-base + 2px);
 				// font-style: italic;
+				border-bottom: 3px double;
+				border-top: 3px double;
 				font-weight: 300;
+				line-height: 1.9em;
+				margin-top: -10px;
 			}
 		}
 		footer{}
@@ -93,6 +97,11 @@
 			display: none;
 		}
 		#center_panel.home{
+			header{
+				h1,h2,h3{
+					color: #000;
+				}
+			}
 			#center_panel-brackets_container{
 				#center_panel-logo{
 					@include size(160px);
