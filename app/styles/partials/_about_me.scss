@@ -38,13 +38,19 @@
 					@include change-font-set('open', $lightGrey, 4rem, 300);
 					@include display(block);
 					@include position(relative);
-					@include prefixer(animation, (fadeIn 1s), webkit moz ms o spec);
+					// @include prefixer(animation, (fadeIn 1s), webkit moz ms o spec);
 					@include size(192px);
 					background: url($bg-stripe-red) repeat;
 					border-radius: 50%;
 					cursor: pointer;
 					line-height: 192px;
 					margin: -25px 0 0 -25px;
+					a{
+						color: #fff;
+						&:hover{
+							color: #fff;
+						}
+					}
 					&.ng-hide{
 						@include prefixer(animation, (fadeOut 1s), webkit moz ms o spec);
 					}
