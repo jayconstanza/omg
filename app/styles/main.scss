@@ -44,6 +44,32 @@
 	font-weight: 600;
 	src: local('Open Sans Semibold Italic'), local('OpenSans-SemiboldItalic'), url(http://themes.googleusercontent.com/static/fonts/opensans/v8/PRmiXeptR36kaC0GEAetxuw_rQOTGi-AJs5XCWaKIhU.woff) format('woff');
 }
+/*==========  HOME TITLE  ==========*/
+
+@font-face {
+  font-family: 'Lobster';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster'), url(http://themes.googleusercontent.com/static/fonts/lobster/v8/NIaFDq6p6eLpSvtV2DTNDQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lobster Two';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lobster Two'), local('LobsterTwo'), url(http://themes.googleusercontent.com/static/fonts/lobstertwo/v5/Law3VVulBOoxyKPkrNsAaLrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+}
+@font-face {
+  font-family: 'Lobster Two';
+  font-style: italic;
+  font-weight: 400;
+  src: local('Lobster Two Italic'), local('LobsterTwo-Italic'), url(http://themes.googleusercontent.com/static/fonts/lobstertwo/v5/Ul_16MSbfayQv1I4QhLEoIo3ZslTYfJv0R05CazkwN8.woff) format('woff');
+}
+@font-face {
+  font-family: 'Satisfy';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Satisfy'), url(http://themes.googleusercontent.com/static/fonts/satisfy/v4/tmRzDlQs5wZmOn9mIuLa-QLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
+}
 
 /*-----  End of FONT FACE  ------*/
 
@@ -127,7 +153,7 @@ html{
 		@include size(100%);
 		#center_panel-brackets_container{
 			@include size(768px 437px);
-			background: url(../../images/brackets.png) no-repeat transparent center;
+			// background: url(../../images/brackets.png) no-repeat transparent center;
 			background-size: cover;
 			margin: 0 auto;
 		}
