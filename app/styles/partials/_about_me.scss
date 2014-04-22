@@ -70,7 +70,8 @@
 				vertical-align: middle;
 			}
 			h1{
-				@include font-size(6rem);
+				// @include font-size(5rem);
+				@include change-font-set('Lavanderia', $grey, 5rem);
 			}
 			h1, h2{
 				@include prefixer(animation, (fadeInLeft 2s), webkit moz ms o spec);

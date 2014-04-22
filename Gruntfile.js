@@ -298,7 +298,7 @@ module.exports = function (grunt) {
 						'views/**/*.html',
 						'bower_components/**/*',
 						'images/**/*.{webp}',
-						'fonts/*'
+						'styles/fonts/*' //edited by derrickroccka
 					]
 				}, {
 					expand: true,

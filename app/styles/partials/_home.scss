@@ -25,7 +25,7 @@
 		header{
 			@extend .text-center;
 			h1{
-				@include change-font-set('Satisfy', black, 4.5rem, 400);
+				@include change-font-set('Lavanderia', #fff, 4.5rem, 400);
 				// @include font-size(3rem);
 
 			}
@@ -37,11 +37,11 @@
 			}
 			h1, h2, h3{
 				@include transition (all 1.1s cubic-bezier(0,1.37,.1,.27));
-				@include prefixer(text-shadow, (-0.08em 0px 0px rgba(255, 0, 0, 0.74), 0.08em 0px 0px rgba(0, 238, 238, 0.83)), webkit moz spec o ms);
-				color: white;
+				// @include prefixer(text-shadow, (-0.08em 0px 0px rgba(255, 0, 0, 0.74), 0.08em 0px 0px rgba(0, 238, 238, 0.83)), webkit moz spec o ms);
+				color: #fff;
 
 				&:hover{
-					@include prefixer(text-shadow, (-0.08em 0px 3px rgba(255, 0, 0, 0.74), 0.08em 0px 0px rgba(0, 238, 238, 0.83)), webkit moz spec o ms);
+					// @include prefixer(text-shadow, (-0.08em 0px 3px rgba(255, 0, 0, 0.74), 0.08em 0px 0px rgba(0, 238, 238, 0.83)), webkit moz spec o ms);
 
 				}
 			}
