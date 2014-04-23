@@ -73,6 +73,9 @@
 				// @include font-size(5rem);
 				@include change-font-set('Lavanderia', $grey, 5rem);
 			}
+			h2{
+				@include change-font-set('Lavanderia', $grey, 2rem);
+			}
 			h1, h2{
 				@include prefixer(animation, (fadeInLeft 2s), webkit moz ms o spec);
 			}
@@ -101,6 +104,18 @@
 					}
 				}
 			}
+			#about_me-clients{
+				@include size(320px auto);
+				margin: 0 auto;
+				max-width: 320px;
+				.client{
+					@include display(inline-block);
+					padding: 0.5rem;
+					// @include size(256px auto);
+
+				}
+			}
+
 			.close{
 				text-align:right;
 				width: 100%;
@@ -124,6 +139,19 @@
 							left: 1rem;
 						}
 					}
+				}
+			}
+			p{
+				line-height: 1.5rem;
+				&.project{
+					// border-bottom: 2px solid $lightGrey;
+					padding: 1rem 0;
+				}
+				&::first-letter{
+					font-size: 150%;
+					// color: $darkRed;
+					font-weight: bold;
+					margin: 0 0 0 2rem;
 				}
 			}
 		}

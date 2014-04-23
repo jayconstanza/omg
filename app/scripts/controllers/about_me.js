@@ -25,11 +25,29 @@ angular.module('AboutMeModule', [])
 	];
 	$scope.stepsOptions = [
 		{ content: '', clear: false, interval: 4000 },
-		{ content: '<li class="fadeIn" ng-click="setChapters(true, false, false);showSteps(true, false, false)" >1. Mi historia</li>', clear: false, interval: 1000 },
-		{ content: '<li class="fadeIn" ng-click="setChapters(false, true, false);showSteps(true, false, false)">2. ¿Para quién he trabajado?</li>', clear: false, interval: 1000 },
-		{ content: '<li class="fadeIn" ng-click="setChapters(false, false, true);showSteps(true, false, false)">3. ¿Qué he hecho?</li>', clear: false, interval: 1000 },
+		{ content: '<li class="fadeIn" ng-click="setChapters(true, false, false);showSteps(true, false, false)" >Mi historia</li>', clear: false, interval: 1000 },
+		{ content: '<li class="fadeIn" ng-click="setChapters(false, true, false);showSteps(true, false, false)">¿Para quién he trabajado?</li>', clear: false, interval: 1000 },
+		{ content: '<li class="fadeIn" ng-click="setChapters(false, false, true);showSteps(true, false, false)">¿Qué he hecho?</li>', clear: false, interval: 1000 },
 		// { content: '<p><small>O si te apetece... envíame un mensaje :)</small></p>', clear: false, interval: 1500 },
 		// { content: '<p><span class="glyphicon glyphicon-envelope"></span></p>', clear: false, interval: 500 },
+	];
+	$scope.projects = [
+		{ name: 'DeelStudio', description: 'Agencia de servicios de video'},
+		{ name: 'CafésPendientes', description: 'Spot publicitario de la iniciativa social'},
+		{ name: 'Collective Memory', description: 'Cortometraje codirigido con Samira Badran'},
+		{ name: 'Putas Asesinas de Roberto Bolaño', description: 'Parte audiovisual de la obra de teatro'},
+		{ name: 'La pelÌcula que nunca quise ver', description: 'Cortometraje dirgido y escrito'},
+	];
+	$scope.clients = [
+		{ name: 'Nestle', klass: 'nestle' },
+		{ name: 'Nescafe', klass: 'nescafe' },
+		{ name: 'Betahaus', klass: 'betahaus' },
+		{ name: 'Super3', klass: 'supertres' },
+		{ name: 'TV3', klass: 'tvtres'},
+		{ name: 'Samira Badran', klass: 'samira_badran' },
+		{ name: 'Companyia Max', klass: 'companyia_max' },
+		{ name: 'Agrü', klass: 'agru' },
+		{ name: 'impactdigital', klass: 'impactdigital' },
 	];
 	$scope.setChapters = function(historia, clientes, trabajos){
 		$scope.chapters.historia = historia;

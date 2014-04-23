@@ -169,6 +169,50 @@ $bg-stripe-white: "/images/patterns/pattern_white_stripes_256x256.jpg";
 .icon-nav_comparte{
 	background-position: -128px -64px;
 }
+
+[class*="client-"]{
+	@include display(inline-block);
+	// @include size(128px);
+	background-image: url(../images/sprites/sprites-clients.png);
+	background-repeat: no-repeat;
+	background-size: 256px 471.5px;
+}
+.client-betahaus{
+	@include size(256px 84px);
+	background-position: 0 0;
+}
+.client-nescafe{
+	@include size(256px 62px);
+	background-position: 0 -84px;
+}
+.client-nestle{
+	@include size(256px 67px);
+	background-position: 0 -147px;
+}
+.client-supertres{
+	@include size(129px 106px);
+	background-position: 0 -214px;
+}
+.client-tvtres{
+	@include size(128px 106px);
+	background-position: -130px -214px;
+}
+.client-samira_badran{
+	@include size(129px 66px);
+	background-position: 0 -320px;
+}
+.client-companyia_max{
+	@include size(128px 66px);
+	background-position: -130px -321px;
+}
+.client-agru{
+	@include size(130px 85px);
+	background-position: 0 -385px;
+}
+.client-impactdigital{
+	@include size(128px 87px);
+	background-position: -130px -388px;
+}
 /*-----  End of CLASSES  ------*/
 
 /*==================================

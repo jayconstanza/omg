@@ -68,9 +68,9 @@
 					cursor: pointer;
 				}
 			}
-			h1{
-				color: $grey;
-				font-size: $h1;
+			h1:not(.video-title){
+				@include change-font-set('Lavanderia', $grey, 3rem, bold);
+				letter-spacing: -1px;
 			}
 			h2{
 				@include display(inline-block);
