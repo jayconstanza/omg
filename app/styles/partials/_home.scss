@@ -50,19 +50,30 @@
 		#center_panel-brackets_container{
 			#center_panel-logo{
 				@include position(relative);
+				// @include prefixer(animation, flip 1s, webkit moz ms o spec);
 				@include size(320px 320px);
 				background: url($bg-stripe-red) repeat transparent;
+				border: 0.5rem solid #fff;
 				border-radius: 50%;
+				cursor: pointer;
 				margin: 0 auto;
 				top: 48px;
 				figure{
 					@include position(relative);
 					margin: 0 auto;
-					top:50px;
+					top: 42.5px;
 					width:180px;
 					img{
 						width: 180px;
 					}
+				}
+				&.flipped{
+					background-image: url(../../images/oriol.jpg);
+					background-repeat: none;
+					background-size: cover;
+				}
+				&.flipped-add-active, &.flipped-add{
+					@include prefixer(animation, flip 1s, webkit moz ms o spec);
 				}
 			}
 		}
@@ -109,7 +120,7 @@
 					@include size(160px);
 					top: 15px;
 					figure{
-						top: 27px;
+						top: 19px;
 						width: 90px;
 						img{
 							width: 90px;
@@ -133,7 +144,7 @@
 					@include size(240px);
 					top: 65px;
 					figure{
-						top: 40px;
+						top: 31px;
 						width: 135px;
 						img{
 							width: 135px;

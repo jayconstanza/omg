@@ -46,11 +46,12 @@ angular.module('codeApp', [
 	$rootScope.menuItems = [
 		// { name: 'Home', href:'/home', klass:'/images/icons/nav/logo.png', id:'menu-icon-logo' },
 		{ name: 'Bobina', href:'/videos', klass:'icon-nav_videos', id:'menu-icon-videos' },
-		{ name: 'LIKES', href:'', klass:'icon-nav_likes', click: true, id:'menu-icon-likes' },
+		{ name: 'LIKES', href:'', klass:'icon-nav_likes', click: { likes: true, comparte: false }, id:'menu-icon-likes' },
 		{ name: 'Sobre mí', href:'/sobre-mi', klass:'icon-nav_about_me', id:'menu-icon-sobre' },
 		{ name: 'Social', href:'/social', klass:'icon-nav_social', id:'menu-icon-social' },
 		{ name: 'Fotos', href:'/fotos', klass:'icon-nav_fotos', id:'menu-icon-fotos' },
-		{ name: 'Comparte', href:'', klass:'icon-nav_comparte', click: true, id:'menu-icon-comparte' }
+		// { name: 'Comparte', href:'', klass:'icon-nav_comparte', click: { likes: false, comparte: true }, id:'menu-icon-comparte' }
+		
 	];
 	$rootScope.windowSize = {
 		width: angular.element($window).width(),
@@ -61,8 +62,9 @@ angular.module('codeApp', [
 		{ klass: 'icon-tw', url: 'http://twitter.com/home?status=¡Hey!%20Echa%20un%20vistazo%20a%20los%20videos%20de%20OMartinGual+'+document.URL },
 		{ klass: 'icon-gplus', url: 'https://plus.google.com/share?url='+document.URL },
 	];
-	$rootScope.likes = false;
 	$rootScope.comparte = false;
+	$rootScope.likes = false;
+
 	$rootScope.log = function(variable) {
 		console.log(variable);
 	};
@@ -71,6 +73,12 @@ angular.module('codeApp', [
 		$location.hash(id);
 		$anchorScroll();
 		$location.hash(old);
+	};
+	$rootScope.showLikes = function (){
+		$rootScope.likes = !$rootScope.likes;
+	};
+	$rootScope.showComparte = function (){
+		$rootScope.comparte = !$rootScope.comparte;
 	};
 
 }]);

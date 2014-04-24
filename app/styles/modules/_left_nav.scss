@@ -21,51 +21,6 @@
 		/*===============================
 		=            CLASSES            =
 		===============================*/
-		
-		// this is the box that has the like buttons
-		.menu_likes{
-			@include min-size(256px 128px);
-			@include position(absolute);
-			@include size(256px 128px);
-			background: url($bg-stripe-black) repeat;
-			left: 128px;
-			top: -32px;
-			z-index: 10000;
-			&.ng-hide-remove, &.ng-hide-add{
-				@include display(block !important);
-				@include transition (all 0.5s linear);
-			}
-			&.ng-hide-remove {
-				@include prefixer(animation, (bounceInLeft 1s), webkit moz ms);
-				animation: bounceInLeft 1s;
-			}
-			&.ng-hide-add {
-				@include prefixer(animation, (bounceOutLeft 1s), webkit moz ms);
-				animation: bounceOutLeft 1s;
-			}
-		}
-
-		.menu_comparte{
-			@include min-size(256px 128px);
-			@include position(absolute);
-			@include size(256px 128px);
-			background: url($bg-stripe-black) repeat;
-			left: 128px;
-			bottom: 0;
-			z-index: 10000;
-			&.ng-hide-remove, &.ng-hide-add{
-				@include display(block !important);
-				@include transition (all 0.5s linear);
-			}
-			&.ng-hide-remove {
-				@include prefixer(animation, (bounceInLeft 1s), webkit moz ms);
-				animation: bounceInLeft 1s;
-			}
-			&.ng-hide-add {
-				@include prefixer(animation, (bounceOutLeft 1s), webkit moz ms);
-				animation: bounceOutLeft 1s;
-			}
-		}
 
 		//this is the wrap that shows the title of the section on hover
 		.menu_wrap{
@@ -152,7 +107,7 @@
 		=            AMPERSANDS            =
 		==================================*/
 		
-		&:first-child{
+		&:first-child, &:last-child{
 			div:not(.menu_wrap){
 				margin-top: 25.5px;
 				img{

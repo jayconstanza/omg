@@ -6,4 +6,12 @@ angular.module('HomeModule', [])
 	$scope.section = 'home';
 	$scope.title = 'Omartingual.com';
 	$scope.tagline = 'Realizador de audiovisuales y espectáculos';
+	$scope.flipCircle = function(){
+		if($scope.flip){
+			$scope.klass = 'flipped';
+		}
+		else{
+			$scope.klass = '';
+		}
+	};
 }]);

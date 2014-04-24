@@ -32,7 +32,34 @@
 	<!-- Add your site or application content here -->
 	
 	<div class="container-fluid" ng-view=""></div>
+	<div ng-show="likes" class="menu_likes">
+		<div>
+			<aside>
+				<br>
+				<span class="glyphicon glyphicon-heart" ng-class="{'red-heart': redHeart}"></span>
+				<p>Show me your love</p>
+			</aside>
+			<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.omartingual.com&amp;width=74&amp;layout=box_count&amp;action=like&amp;show_faces=false&amp;share=false&amp;height=65" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:74px; height:65px;" allowTransparency="true" 
+			ng-mouseenter="redHeart = !redHeart" ng-mouseleave="redHeart = !redHeart"></iframe> <br>
+			<!-- Place this tag where you want the +1 button to render. -->
+			<div ng-mouseenter="redHeart = !redHeart" ng-mouseleave="redHeart = !redHeart">
+				<div class="g-plusone" data-size="tall"></div>
+			</div>
+			<!-- Place this tag after the last +1 button tag. -->
+			<script type="text/javascript">
+			window.___gcfg = {lang: 'es'};
+
+			(function() {
+				var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+				po.src = 'https://apis.google.com/js/platform.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+			})();
+			</script>
+		</div>
+	</div>
+<!-- <div ng-show="comparte" class="menu_comparte"></div> -->
 	<ng-include src="'/views/modules/footer.html'"></ng-include>
+
 
 	<!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
     <script>

@@ -23,15 +23,6 @@
 				margin-bottom: 2px;
 				margin-right: 2px;
 				padding: 10px 5px 20px 5px;
-				.glyphicon-heart{
-					@include prefixer(animation, (pulse 2s, 1s pulse 2s), moz spec webkit o ms);
-					@include prefixer(transition, (all 2s), moz spec webkit o ms);
-					animation-iteration-count: infinite;
-					&:hover{
-						color: $darkRed;
-						// cursor: pointer; Enable when like action is ready
-					}
-				}
 			}
 		}
 		#center_panel-description{

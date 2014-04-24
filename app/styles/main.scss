@@ -47,30 +47,6 @@
 /*==========  HOME TITLE  ==========*/
 
 @font-face {
-  font-family: 'Lobster';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lobster'), url(http://themes.googleusercontent.com/static/fonts/lobster/v8/NIaFDq6p6eLpSvtV2DTNDQLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
-}
-@font-face {
-  font-family: 'Lobster Two';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Lobster Two'), local('LobsterTwo'), url(http://themes.googleusercontent.com/static/fonts/lobstertwo/v5/Law3VVulBOoxyKPkrNsAaLrIa-7acMAeDBVuclsi6Gc.woff) format('woff');
-}
-@font-face {
-  font-family: 'Lobster Two';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Lobster Two Italic'), local('LobsterTwo-Italic'), url(http://themes.googleusercontent.com/static/fonts/lobstertwo/v5/Ul_16MSbfayQv1I4QhLEoIo3ZslTYfJv0R05CazkwN8.woff) format('woff');
-}
-@font-face {
-  font-family: 'Satisfy';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Satisfy'), url(http://themes.googleusercontent.com/static/fonts/satisfy/v4/tmRzDlQs5wZmOn9mIuLa-QLUuEpTyoUstqEm5AMlJo4.woff) format('woff');
-}
-@font-face {
   font-family: 'Lavanderia';
   font-style: normal;
   font-weight: 300;
@@ -184,7 +160,69 @@ html{
 		}
 	}
 }
+// this is the box that has the like buttons
+.menu_likes{
+	@extend .text-center;
+	@include min-size(128px 100%);
+	@include position(fixed);
+	@include size(128px 100%);
+	background: rgba(255,255,255,0.8);
+	left: 128px;
+	top: 0;
+	z-index: 10000;
+	aside{
+		.glyphicon-heart{
+			font-size: 3rem;
+			&:hover{
+				font-size: 4rem;
+			}
+		}
+		.red-heart{
+			color: $darkRed;
+		}
+		p{
+			@include change-font-set('Lavanderia',$grey,2rem, 300);
+		}
+	}
+	iframe{
+		@include size(74px auto);
+		text-align: center;
+		margin: 0 auto;
+		div{
+			margin: 0 auto;
+		}
+	}
+	&.ng-hide-remove, &.ng-hide-add{
+		@include display(block !important);
+		@include transition (all 0.5s linear);
+	}
+	&.ng-hide-remove {
+		@include prefixer(animation, (bounceInDown 0.5s), webkit moz ms o spec);
+	}
+	&.ng-hide-add {
+		@include prefixer(animation, (bounceOutUp 0.5s), webkit moz ms o spec);
+	}
+}
 
+.menu_comparte{
+	@include min-size(256px 128px);
+	@include position(absolute);
+	@include size(256px 128px);
+	background: url($bg-stripe-black) repeat;
+	left: 128px;
+	bottom: 0;
+	z-index: 10000;
+	&.ng-hide-remove, &.ng-hide-add{
+		@include display(block !important);
+		@include transition (all 0.5s linear);
+	}
+	&.ng-hide-remove {
+		@include prefixer(animation, (bounceInLeft 0.5s), webkit moz ms);
+	}
+	&.ng-hide-add {
+		@include prefixer(animation, (bounceOutLeft 0.5s), webkit moz ms);
+	}
+}
 /*-----  End of ID'S  ------*/
 
 /*=====================================
@@ -202,6 +240,9 @@ html{
 				@include size(320px 182px);
 			}
 		}
+	}
+	.menu_likes{
+		@include display(none);
 	}
 }
 
