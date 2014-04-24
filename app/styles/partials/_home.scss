@@ -73,7 +73,7 @@
 					background-size: cover;
 				}
 				&.flipped-add-active, &.flipped-add{
-					@include prefixer(animation, flip 1s, webkit moz ms o spec);
+					@include prefixer(animation, flipInY 1s, webkit moz ms o spec);
 				}
 			}
 		}
