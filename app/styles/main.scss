@@ -181,7 +181,7 @@ html{
 			color: $darkRed;
 		}
 		p{
-			@include change-font-set('Lavanderia',$grey,2rem, 300);
+			@include change-font-set(('Lavanderia', 'open'),$grey,2rem, 300);
 		}
 	}
 	iframe{

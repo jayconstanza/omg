@@ -6,6 +6,7 @@ angular.module('HomeModule', [])
 	$scope.section = 'home';
 	$scope.title = 'Omartingual.com';
 	$scope.tagline = 'Realizador de audiovisuales y espectáculos';
+	$scope.onSize = 768;
 	$scope.flipCircle = function(){
 		if($scope.flip){
 			$scope.klass = 'flipped';

@@ -13,7 +13,7 @@
 		height: auto;
 		min-height: 100%;
 		min-width: 100%;
-		opacity: .6;
+		opacity: .8;
 		overflow: hidden;
 		position: absolute;
 		right: 0px;
@@ -25,7 +25,7 @@
 		header{
 			@extend .text-center;
 			h1{
-				@include change-font-set('Lavanderia', #fff, 4.5rem, bold);
+				@include change-font-set(('Lavanderia', 'open'), #fff, 4.5rem, bold);
 				letter-spacing: -2px;
 				// @include font-size(3rem);
 

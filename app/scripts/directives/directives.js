@@ -185,4 +185,23 @@ angular.module('Directives', [])
 			interval = $interval(adding, v);
 		}
 	};
+}])
+.directive('ngVideoStartStopOnSize', [ '$rootScope', '$location', function($rootScope, $location) {
+	return {
+		restrict: 'A',
+		scope: {
+			onSize: '&onSize',
+		},
+		link: function (scope,element) {
+			$rootScope.$watch('windowSize.width', function(newVal){
+				//we'll play the vid if the window width is gt 767 and the user is in /
+				if(newVal > 767 && $location.path() === '/'){
+					angular.element(element).get(0).play();
+				}
+				else{
+					angular.element(element).get(0).pause();
+				}
+			});
+		}
+	};
 }]);
