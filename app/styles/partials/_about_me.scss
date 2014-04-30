@@ -32,7 +32,7 @@
 				margin: 0 auto;
 			}
 			.logo{
-				background-image: url(../../images/oriol.jpg);
+				background-image: url(../../images/oriol.png);
 				background-repeat: none;
 				#email{
 					@include change-font-set('open', $lightGrey, 4rem, 300);
