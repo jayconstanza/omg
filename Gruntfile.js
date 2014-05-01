@@ -375,6 +375,25 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		htmlSnapshot: {
+			all: {
+				options: {
+					snapshotPath: 'app/views/snapshots/',
+					sitePath: 'http://0.0.0.0:9000/',
+					msWaitForPages: 1000,
+					urls: [
+						'/videos',
+						'/fotos',
+						'/sobre-mi',
+						'/social'
+						// '/about'
+					]
+				}
+			},
+			prod: {
+				options: {}
+			}
+		}
 	});
 
 
@@ -428,8 +447,8 @@ module.exports = function (grunt) {
 		// 'test',
 		'build'
 	]);
-	grunt.registerTask('guncss', [
+	grunt.registerTask('snap', [
 		// 'build',
-		'uncss'
+		'htmlSnapshot'
 	]);
 };
