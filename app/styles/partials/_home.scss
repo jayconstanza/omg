@@ -21,6 +21,19 @@
 		width: auto;
 		z-index: -1000;
 	}
+	#mute-video{
+		color: #fff;
+		font-size: 2rem;
+		position: absolute;
+		right: 0; 
+		top: 0;
+		span{
+			cursor: pointer !important;
+		}
+		&:hover{
+			@include prefixer(animation, tada 0.75s, webkit moz ms o spec);
+		}
+	}
 	#center_panel.home{
 		header{
 			@extend .text-center;
