@@ -69,7 +69,7 @@
 				}
 			}
 			h1:not(.video-title){
-				@include change-font-set(('Lavanderia', 'open'), $grey, 3rem, bold);
+				@include change-font-set(($font-serif, $font-serif-alt), $grey, 3rem, bold);
 				letter-spacing: -1px;
 			}
 			h2{

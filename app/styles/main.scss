@@ -50,7 +50,14 @@
   font-family: 'Lavanderia';
   font-style: normal;
   font-weight: 300;
-  src: local('Lavanderia Delicate'), url('fonts/Lavanderia Delicate.otf') format('otf');
+  src: local('Lavanderia Delicate'), url('fonts/LavanderiaDelicate.otf') format('otf');
+}
+
+@font-face {
+  font-family: 'Corneria';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Corneria Script'), url('fonts/CorneriaScript.ttf') format('ttf');
 }
 /*-----  End of FONT FACE  ------*/
 
@@ -181,7 +188,7 @@ html{
 			color: $darkRed;
 		}
 		p{
-			@include change-font-set(('Lavanderia', 'open'),$grey,2rem, 300);
+			@include change-font-set(($font-serif, $font-serif-alt),$grey,2rem, 300);
 		}
 	}
 	iframe{

@@ -13,7 +13,7 @@
 			@include size(100% auto);
 			margin: 0 auto;
 			h1{
-				@include change-font-set(('Lavanderia', 'open'), $grey, 4rem);
+				@include change-font-set(($font-serif, $font-serif-alt), $grey, 4rem);
 			}
 			h1, h2, h3{
 				// @extend .text-left;

@@ -38,7 +38,7 @@
 		header{
 			@extend .text-center;
 			h1{
-				@include change-font-set(('Lavanderia', 'open'), #fff, 4.5rem, 400);
+				@include change-font-set(($font-serif, $font-serif-alt), #fff, 4.5rem, 400);
 				// letter-spacing: -2px;
 				// @include font-size(3rem);
 
