@@ -50,14 +50,14 @@
   font-family: 'Lavanderia';
   font-style: normal;
   font-weight: 300;
-  src: local('Lavanderia Delicate'), url('fonts/LavanderiaDelicate.otf') format('otf');
+  src: url('fonts/LavanderiaDelicate.otf') format('otf');
 }
 
 @font-face {
   font-family: 'Corneria';
   font-style: normal;
   font-weight: 300;
-  src: local('Corneria Script'), url('fonts/CorneriaScript.ttf') format('ttf');
+  src: url('fonts/CorneriaScript.ttf') format('ttf');
 }
 /*-----  End of FONT FACE  ------*/
 
