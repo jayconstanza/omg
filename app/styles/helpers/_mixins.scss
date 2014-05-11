@@ -3,9 +3,6 @@
 * SCSS FILE FOR THE HELPER: app/styles/helpers/mixins.scss
 * @author Derrick Roccka
 **/
-// @import 'sass-bootstrap/lib/bootstrap';
-// @impor
-t 'bourbon/app/assets/stylesheets/_bourbon';
 
 /*=================================
 =            VARIABLES            =
@@ -30,9 +27,6 @@ $font-serif-alt: 'Pacifico';
 
 /*==========  IMAGES  ==========*/
 
-// $bg-stripe-black: "../../images/patterns/pattern_black_stripes_256x256.jpg";
-// $bg-stripe-red: "../../images/patterns/pattern_red_stripes_256x256.jpg";
-// $bg-stripe-white: "../../images/patterns/pattern_white_stripes_256x256.jpg";
 $bg-stripe-black: "/images/patterns/pattern_black_stripes_256x256.jpg";
 $bg-stripe-red: "/images/patterns/pattern_red_stripes_256x256.jpg";
 $bg-stripe-white: "/images/patterns/pattern_white_stripes_256x256.jpg";
