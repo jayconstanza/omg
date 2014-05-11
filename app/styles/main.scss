@@ -54,10 +54,16 @@
 }
 
 @font-face {
-  font-family: 'Corneria';
+  font-family: 'Corneriax';
   font-style: normal;
   font-weight: 300;
   src: url('fonts/CorneriaScript.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'Corneria';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Pacifico Regular'), local('Pacifico-Regular'), url(http://themes.googleusercontent.com/static/fonts/pacifico/v5/yunJt0R8tCvMyj_V4xSjaXYhjbSpvc47ee6xR_80Hnw.woff) format('woff');
 }
 /*-----  End of FONT FACE  ------*/
 
