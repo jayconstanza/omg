@@ -64,13 +64,14 @@
 		#center_panel-brackets_container{
 			#center_panel-logo{
 				@include position(relative);
-				// @include prefixer(animation, flip 1s, webkit moz ms o spec);
+				@include prefixer(transition, opacity 1s, webkit moz ms o spec);
 				@include size(320px 320px);
 				background: url($bg-stripe-red) repeat transparent;
 				border: 0.5rem solid #fff;
 				border-radius: 50%;
 				cursor: pointer;
 				margin: 0 auto;
+				opacity: 1;
 				top: 48px;
 				figure{
 					@include position(relative);
@@ -80,6 +81,9 @@
 					img{
 						width: 180px;
 					}
+				}
+				&:hover{
+					opacity: 0.5;
 				}
 				&.flipped{
 					background-image: url(../../images/oriol.png);
